@@ -1,59 +1,111 @@
 week,date,series,title,format,platforms
 1,2026-06-02,Hot Wins,Hot Wins #1 - Full Interview,long,LinkedIn · YouTube
-1,2026-06-04,ChiliPalooza,ChiliPalooza #1 - Full Interview,long,LinkedIn · YouTube
+1,2026-06-03,ChiliPalooza,ChiliPalooza #1 - Full Interview,long,LinkedIn · YouTube
+1,2026-06-04,Hot Wins,Hot Wins #1 - Best Moment (Extract),short,LinkedIn · Instagram
+1,2026-06-05,ChiliPalooza,ChiliPalooza #1 - This or That,short,LinkedIn · Instagram
 1,2026-06-06,GTM Clawllective,GTM Clawllective - Demo Hack #1,short,LinkedIn
-2,2026-06-09,Hot Wins,Hot Wins #1 - Best Moment (Extract),short,LinkedIn · Instagram
-2,2026-06-11,ChiliPalooza,ChiliPalooza #1 - This or That,short,LinkedIn · Instagram
+2,2026-06-09,Hot Wins,Hot Wins #2 - Full Interview,long,LinkedIn · YouTube
+2,2026-06-10,ChiliPalooza,ChiliPalooza #2 - Full Interview,long,LinkedIn · YouTube
+2,2026-06-11,Hot Wins,Hot Wins #2 - Best Moment (Extract),short,LinkedIn · Instagram
+2,2026-06-12,ChiliPalooza,ChiliPalooza #2 - This or That,short,LinkedIn · Instagram
 2,2026-06-13,GTM Clawllective,GTM Clawllective - Nicolas Interview #1,short,LinkedIn · Instagram
-3,2026-06-16,Hot Wins,Hot Wins #2 - Full Interview,long,LinkedIn · YouTube
-3,2026-06-18,ChiliPalooza,ChiliPalooza #2 - Full Interview,long,LinkedIn · YouTube
+3,2026-06-16,Hot Wins,Hot Wins #3 - Full Interview,long,LinkedIn · YouTube
+3,2026-06-17,ChiliPalooza,ChiliPalooza #3 - Full Interview,long,LinkedIn · YouTube
+3,2026-06-18,Hot Wins,Hot Wins #3 - Best Moment (Extract),short,LinkedIn · Instagram
+3,2026-06-19,ChiliPalooza,ChiliPalooza #3 - This or That,short,LinkedIn · Instagram
 3,2026-06-20,GTM Clawllective,GTM Clawllective - Demo Hack #2,short,LinkedIn
-4,2026-06-23,Hot Wins,Hot Wins #2 - Best Moment (Extract),short,LinkedIn · Instagram
-4,2026-06-25,ChiliPalooza,ChiliPalooza #2 - This or That,short,LinkedIn · Instagram
+4,2026-06-23,Hot Wins,Hot Wins #4 - Full Interview,long,LinkedIn · YouTube
+4,2026-06-24,ChiliPalooza,ChiliPalooza #4 - Full Interview,long,LinkedIn · YouTube
+4,2026-06-25,Hot Wins,Hot Wins #4 - Best Moment (Extract),short,LinkedIn · Instagram
+4,2026-06-26,ChiliPalooza,ChiliPalooza #4 - This or That,short,LinkedIn · Instagram
 4,2026-06-27,GTM Clawllective,GTM Clawllective - Nicolas Interview #2,short,LinkedIn · Instagram
-5,2026-06-30,Hot Wins,Hot Wins #3 - Full Interview,long,LinkedIn · YouTube
-5,2026-07-02,ChiliPalooza,ChiliPalooza #3 - Full Interview,long,LinkedIn · YouTube
+5,2026-06-30,Hot Wins,Hot Wins #5 - Full Interview,long,LinkedIn · YouTube
+5,2026-07-01,ChiliPalooza,ChiliPalooza #5 - Full Interview,long,LinkedIn · YouTube
+5,2026-07-02,Hot Wins,Hot Wins #5 - Best Moment (Extract),short,LinkedIn · Instagram
+5,2026-07-03,ChiliPalooza,ChiliPalooza #5 - This or That,short,LinkedIn · Instagram
 5,2026-07-04,GTM Clawllective,GTM Clawllective - Demo Hack #3,short,LinkedIn
-6,2026-07-07,Hot Wins,Hot Wins #3 - Best Moment (Extract),short,LinkedIn · Instagram
-6,2026-07-09,ChiliPalooza,ChiliPalooza #3 - This or That,short,LinkedIn · Instagram
+6,2026-07-07,Hot Wins,Hot Wins #6 - Full Interview,long,LinkedIn · YouTube
+6,2026-07-08,ChiliPalooza,ChiliPalooza #6 - Full Interview,long,LinkedIn · YouTube
+6,2026-07-09,Hot Wins,Hot Wins #6 - Best Moment (Extract),short,LinkedIn · Instagram
+6,2026-07-10,ChiliPalooza,ChiliPalooza #6 - This or That,short,LinkedIn · Instagram
 6,2026-07-11,GTM Clawllective,GTM Clawllective - Nicolas Interview #3,short,LinkedIn · Instagram
-7,2026-07-14,Hot Wins,Hot Wins #4 - Full Interview,long,LinkedIn · YouTube
-7,2026-07-16,ChiliPalooza,ChiliPalooza #4 - Full Interview,long,LinkedIn · YouTube
+7,2026-07-14,Hot Wins,Hot Wins #7 - Full Interview,long,LinkedIn · YouTube
+7,2026-07-15,ChiliPalooza,ChiliPalooza #7 - Full Interview,long,LinkedIn · YouTube
+7,2026-07-16,Hot Wins,Hot Wins #7 - Best Moment (Extract),short,LinkedIn · Instagram
+7,2026-07-17,ChiliPalooza,ChiliPalooza #7 - This or That,short,LinkedIn · Instagram
 7,2026-07-18,GTM Clawllective,GTM Clawllective - Demo Hack #4,short,LinkedIn
-8,2026-07-21,Hot Wins,Hot Wins #4 - Best Moment (Extract),short,LinkedIn · Instagram
-8,2026-07-23,ChiliPalooza,ChiliPalooza #4 - This or That,short,LinkedIn · Instagram
+8,2026-07-21,Hot Wins,Hot Wins #8 - Full Interview,long,LinkedIn · YouTube
+8,2026-07-22,ChiliPalooza,ChiliPalooza #8 - Full Interview,long,LinkedIn · YouTube
+8,2026-07-23,Hot Wins,Hot Wins #8 - Best Moment (Extract),short,LinkedIn · Instagram
+8,2026-07-24,ChiliPalooza,ChiliPalooza #8 - This or That,short,LinkedIn · Instagram
 8,2026-07-25,GTM Clawllective,GTM Clawllective - Nicolas Interview #4,short,LinkedIn · Instagram
-9,2026-07-28,Hot Wins,Hot Wins #5 - Full Interview,long,LinkedIn · YouTube
-9,2026-07-30,ChiliPalooza,ChiliPalooza #5 - Full Interview,long,LinkedIn · YouTube
+9,2026-07-28,Hot Wins,Hot Wins #9 - Full Interview,long,LinkedIn · YouTube
+9,2026-07-29,ChiliPalooza,ChiliPalooza #9 - Full Interview,long,LinkedIn · YouTube
+9,2026-07-30,Hot Wins,Hot Wins #9 - Best Moment (Extract),short,LinkedIn · Instagram
+9,2026-07-31,ChiliPalooza,ChiliPalooza #9 - This or That,short,LinkedIn · Instagram
 9,2026-08-01,GTM Clawllective,GTM Clawllective - Demo Hack #5,short,LinkedIn
-10,2026-08-04,Hot Wins,Hot Wins #5 - Best Moment (Extract),short,LinkedIn · Instagram
-10,2026-08-06,ChiliPalooza,ChiliPalooza #5 - This or That,short,LinkedIn · Instagram
+10,2026-08-04,Hot Wins,Hot Wins #10 - Full Interview,long,LinkedIn · YouTube
+10,2026-08-05,ChiliPalooza,ChiliPalooza #10 - Full Interview,long,LinkedIn · YouTube
+10,2026-08-06,Hot Wins,Hot Wins #10 - Best Moment (Extract),short,LinkedIn · Instagram
+10,2026-08-07,ChiliPalooza,ChiliPalooza #10 - This or That,short,LinkedIn · Instagram
 10,2026-08-08,GTM Clawllective,GTM Clawllective - Nicolas Interview #5,short,LinkedIn · Instagram
-11,2026-08-11,Hot Wins,Hot Wins #6 - Full Interview,long,LinkedIn · YouTube
-11,2026-08-13,ChiliPalooza,ChiliPalooza #6 - Full Interview,long,LinkedIn · YouTube
+11,2026-08-11,Hot Wins,Hot Wins #11 - Full Interview,long,LinkedIn · YouTube
+11,2026-08-12,ChiliPalooza,ChiliPalooza #11 - Full Interview,long,LinkedIn · YouTube
+11,2026-08-13,Hot Wins,Hot Wins #11 - Best Moment (Extract),short,LinkedIn · Instagram
+11,2026-08-14,ChiliPalooza,ChiliPalooza #11 - This or That,short,LinkedIn · Instagram
 11,2026-08-15,GTM Clawllective,GTM Clawllective - Demo Hack #6,short,LinkedIn
-12,2026-08-18,Hot Wins,Hot Wins #6 - Best Moment (Extract),short,LinkedIn · Instagram
-12,2026-08-20,ChiliPalooza,ChiliPalooza #6 - This or That,short,LinkedIn · Instagram
+12,2026-08-18,Hot Wins,Hot Wins #12 - Full Interview,long,LinkedIn · YouTube
+12,2026-08-19,ChiliPalooza,ChiliPalooza #12 - Full Interview,long,LinkedIn · YouTube
+12,2026-08-20,Hot Wins,Hot Wins #12 - Best Moment (Extract),short,LinkedIn · Instagram
+12,2026-08-21,ChiliPalooza,ChiliPalooza #12 - This or That,short,LinkedIn · Instagram
 12,2026-08-22,GTM Clawllective,GTM Clawllective - Nicolas Interview #6,short,LinkedIn · Instagram
-13,2026-08-25,Hot Wins,Hot Wins #7 - Full Interview,long,LinkedIn · YouTube
-13,2026-08-27,ChiliPalooza,ChiliPalooza #7 - Full Interview,long,LinkedIn · YouTube
+13,2026-08-25,Hot Wins,Hot Wins #13 - Full Interview,long,LinkedIn · YouTube
+13,2026-08-26,ChiliPalooza,ChiliPalooza #13 - Full Interview,long,LinkedIn · YouTube
+13,2026-08-27,Hot Wins,Hot Wins #13 - Best Moment (Extract),short,LinkedIn · Instagram
+13,2026-08-28,ChiliPalooza,ChiliPalooza #13 - This or That,short,LinkedIn · Instagram
 13,2026-08-29,GTM Clawllective,GTM Clawllective - Demo Hack #7,short,LinkedIn
-14,2026-09-01,Hot Wins,Hot Wins #7 - Best Moment (Extract),short,LinkedIn · Instagram
-14,2026-09-03,ChiliPalooza,ChiliPalooza #7 - This or That,short,LinkedIn · Instagram
+14,2026-09-01,Hot Wins,Hot Wins #14 - Full Interview,long,LinkedIn · YouTube
+14,2026-09-02,ChiliPalooza,ChiliPalooza #14 - Full Interview,long,LinkedIn · YouTube
+14,2026-09-03,Hot Wins,Hot Wins #14 - Best Moment (Extract),short,LinkedIn · Instagram
+14,2026-09-04,ChiliPalooza,ChiliPalooza #14 - This or That,short,LinkedIn · Instagram
 14,2026-09-05,GTM Clawllective,GTM Clawllective - Nicolas Interview #7,short,LinkedIn · Instagram
-15,2026-09-08,Hot Wins,Hot Wins #8 - Full Interview,long,LinkedIn · YouTube
+15,2026-09-08,Hot Wins,Hot Wins #15 - Full Interview,long,LinkedIn · YouTube
+15,2026-09-09,ChiliPalooza,ChiliPalooza #15 - Full Interview,long,LinkedIn · YouTube
+15,2026-09-10,Hot Wins,Hot Wins #15 - Best Moment (Extract),short,LinkedIn · Instagram
+15,2026-09-11,ChiliPalooza,ChiliPalooza #15 - This or That,short,LinkedIn · Instagram
 15,2026-09-12,GTM Clawllective,GTM Clawllective - Demo Hack #8,short,LinkedIn
-16,2026-09-15,Hot Wins,Hot Wins #8 - Best Moment (Extract),short,LinkedIn · Instagram
+16,2026-09-15,Hot Wins,Hot Wins #16 - Full Interview,long,LinkedIn · YouTube
+16,2026-09-16,ChiliPalooza,ChiliPalooza #16 - Full Interview,long,LinkedIn · YouTube
+16,2026-09-17,Hot Wins,Hot Wins #16 - Best Moment (Extract),short,LinkedIn · Instagram
+16,2026-09-18,ChiliPalooza,ChiliPalooza #16 - This or That,short,LinkedIn · Instagram
 16,2026-09-19,GTM Clawllective,GTM Clawllective - Nicolas Interview #8,short,LinkedIn · Instagram
-17,2026-09-22,Hot Wins,Hot Wins #9 - Full Interview,long,LinkedIn · YouTube
+17,2026-09-22,Hot Wins,Hot Wins #17 - Full Interview,long,LinkedIn · YouTube
+17,2026-09-23,ChiliPalooza,ChiliPalooza #17 - Full Interview,long,LinkedIn · YouTube
+17,2026-09-24,Hot Wins,Hot Wins #17 - Best Moment (Extract),short,LinkedIn · Instagram
+17,2026-09-25,ChiliPalooza,ChiliPalooza #17 - This or That,short,LinkedIn · Instagram
 17,2026-09-26,GTM Clawllective,GTM Clawllective - Demo Hack #9,short,LinkedIn
-18,2026-09-29,Hot Wins,Hot Wins #9 - Best Moment (Extract),short,LinkedIn · Instagram
+18,2026-09-29,Hot Wins,Hot Wins #18 - Full Interview,long,LinkedIn · YouTube
+18,2026-09-30,ChiliPalooza,ChiliPalooza #18 - Full Interview,long,LinkedIn · YouTube
+18,2026-10-01,Hot Wins,Hot Wins #18 - Best Moment (Extract),short,LinkedIn · Instagram
+18,2026-10-02,ChiliPalooza,ChiliPalooza #18 - This or That,short,LinkedIn · Instagram
 18,2026-10-03,GTM Clawllective,GTM Clawllective - Nicolas Interview #9,short,LinkedIn · Instagram
-19,2026-10-06,Hot Wins,Hot Wins #10 - Full Interview,long,LinkedIn · YouTube
+19,2026-10-06,Hot Wins,Hot Wins #19 - Full Interview,long,LinkedIn · YouTube
+19,2026-10-07,ChiliPalooza,ChiliPalooza #19 - Full Interview,long,LinkedIn · YouTube
+19,2026-10-08,Hot Wins,Hot Wins #19 - Best Moment (Extract),short,LinkedIn · Instagram
+19,2026-10-09,ChiliPalooza,ChiliPalooza #19 - This or That,short,LinkedIn · Instagram
 19,2026-10-10,GTM Clawllective,GTM Clawllective - Demo Hack #10,short,LinkedIn
-20,2026-10-13,Hot Wins,Hot Wins #10 - Best Moment (Extract),short,LinkedIn · Instagram
+20,2026-10-13,Hot Wins,Hot Wins #20 - Full Interview,long,LinkedIn · YouTube
+20,2026-10-14,ChiliPalooza,ChiliPalooza #20 - Full Interview,long,LinkedIn · YouTube
+20,2026-10-15,Hot Wins,Hot Wins #20 - Best Moment (Extract),short,LinkedIn · Instagram
+20,2026-10-16,ChiliPalooza,ChiliPalooza #20 - This or That,short,LinkedIn · Instagram
 20,2026-10-17,GTM Clawllective,GTM Clawllective - Nicolas Interview #10,short,LinkedIn · Instagram
-21,2026-10-20,Hot Wins,Hot Wins #11 - Full Interview,long,LinkedIn · YouTube
+21,2026-10-20,Hot Wins,Hot Wins #21 - Full Interview,long,LinkedIn · YouTube
+21,2026-10-21,ChiliPalooza,ChiliPalooza #21 - Full Interview,long,LinkedIn · YouTube
+21,2026-10-22,Hot Wins,Hot Wins #21 - Best Moment (Extract),short,LinkedIn · Instagram
+21,2026-10-23,ChiliPalooza,ChiliPalooza #21 - This or That,short,LinkedIn · Instagram
 21,2026-10-24,GTM Clawllective,GTM Clawllective - Demo Hack #11,short,LinkedIn
-22,2026-10-27,Hot Wins,Hot Wins #11 - Best Moment (Extract),short,LinkedIn · Instagram
+22,2026-10-27,Hot Wins,Hot Wins #22 - Full Interview,long,LinkedIn · YouTube
+22,2026-10-28,ChiliPalooza,ChiliPalooza #22 - Full Interview,long,LinkedIn · YouTube
+22,2026-10-29,Hot Wins,Hot Wins #22 - Best Moment (Extract),short,LinkedIn · Instagram
+22,2026-10-30,ChiliPalooza,ChiliPalooza #22 - This or That,short,LinkedIn · Instagram
 22,2026-10-31,GTM Clawllective,GTM Clawllective - Nicolas Interview #11,short,LinkedIn · Instagram

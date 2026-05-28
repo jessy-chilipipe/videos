@@ -133,7 +133,7 @@ tr.gtm .sbadge{color:var(--blue);  background:#D0D8FF}
 <header class="header">
   <span class="eyebrow">Video Content Calendar</span>
   <h1 class="title"><span>Chili Piper</span> — Video Content Calendar</h1>
-  <p class="subtitle">June – October 2026 &nbsp;·&nbsp; 22 weeks &nbsp;·&nbsp; LinkedIn · YouTube · Instagram</p>
+  <p class="subtitle">June – October 2026 &nbsp;·&nbsp; 22 weeks &nbsp;·&nbsp; 5 posts/week &nbsp;·&nbsp; LinkedIn · YouTube · Instagram</p>
   <div class="legend">
     <span class="chip chip-hw"><span class="dot"></span>Hot Wins</span>
     <span class="chip chip-cp"><span class="dot"></span>ChiliPalooza</span>
@@ -147,28 +147,29 @@ tr.gtm .sbadge{color:var(--blue);  background:#D0D8FF}
   <div class="info-card">
     <span class="card-label">Publishing Rhythm</span>
     <ul>
-      <li>3 posts per week — Monday · Wednesday · Friday</li>
-      <li>1 <strong>Hot Wins</strong> post per week (full interview odd weeks, extract even weeks)</li>
-      <li>1 <strong>ChiliPalooza</strong> post per week — weeks 1 to 14</li>
-      <li>1 <strong>GTM Clawllective</strong> post per week (demo hack alternates with Nicolas interview)</li>
-      <li>From week 15: 2 posts per week — Hot Wins + GTM Clawllective only</li>
+      <li><strong>5 posts per week</strong> — Tue · Wed · Thu · Fri · Sat</li>
+      <li>Tue: <strong>Hot Wins</strong> Full Interview (long — LinkedIn + YouTube)</li>
+      <li>Wed: <strong>ChiliPalooza</strong> Full Interview (long — LinkedIn + YouTube)</li>
+      <li>Thu: <strong>Hot Wins</strong> Best Moment Extract (short — LinkedIn + Instagram)</li>
+      <li>Fri: <strong>ChiliPalooza</strong> This or That (short — LinkedIn + Instagram)</li>
+      <li>Sat: <strong>GTM Clawllective</strong> Demo Hack / Nicolas Interview (alternating)</li>
     </ul>
   </div>
   <div class="info-card">
     <span class="card-label">Content Inventory</span>
     <ul>
-      <li><strong>11 Hot Wins interviews</strong> → 11 full + 11 extracts = 22 posts (22 weeks)</li>
-      <li><strong>7 ChiliPalooza interviews</strong> → 7 full + 7 This or That = 14 posts (14 weeks)</li>
-      <li><strong>GTM Clawllective (weekly)</strong> → alternating demo hack + Nicolas interview</li>
-      <li>Total: <strong>~58 posts</strong> over 22 weeks</li>
+      <li><strong>22 Hot Wins interviews</strong> → 22 full + 22 extracts = 44 posts</li>
+      <li><strong>22 ChiliPalooza interviews</strong> → 22 full + 22 This or That = 44 posts</li>
+      <li><strong>GTM Clawllective (weekly)</strong> → 11 Demo Hacks + 11 Nicolas Interviews = 22 posts</li>
+      <li>Total: <strong>110 posts</strong> over 22 weeks</li>
     </ul>
   </div>
 </div>
 
 <div class="controls">
   <div class="view-toggle">
-    <button class="view-btn active" id="btn-list" onclick="switchView('list')">☰  List</button>
-    <button class="view-btn" id="btn-cal" onclick="switchView('cal')">⊞  Calendar</button>
+    <button class="view-btn" id="btn-list" onclick="switchView('list')">☰  List</button>
+    <button class="view-btn active" id="btn-cal" onclick="switchView('cal')">⊞  Calendar</button>
   </div>
   <nav class="month-nav" id="month-nav">
     <a href="#june"      class="month-btn active">June</a>
@@ -179,8 +180,8 @@ tr.gtm .sbadge{color:var(--blue);  background:#D0D8FF}
   </nav>
 </div>
 
-<div id="list-view"></div>
-<div id="cal-view" style="display:none"></div>
+<div id="list-view" style="display:none"></div>
+<div id="cal-view"></div>
 
 <footer class="footer">
   This calendar is a working draft and may be adjusted based on editing capacity and content availability.
@@ -286,64 +287,138 @@ const WM = {
 };
 
 let EV = [
-  {w:1, d:'2026-06-02',s:'hw', t:'Hot Wins #1 — Full Interview',            f:'long', p:'LinkedIn · YouTube'},
-  {w:1, d:'2026-06-04',s:'cp', t:'ChiliPalooza #1 — Full Interview',        f:'long', p:'LinkedIn · YouTube'},
-  {w:1, d:'2026-06-06',s:'gtm',t:'GTM Clawllective — Demo Hack #1',         f:'short',p:'LinkedIn'},
-  {w:2, d:'2026-06-09',s:'hw', t:'Hot Wins #1 — Best Moment (Extract)',     f:'short',p:'LinkedIn · Instagram'},
-  {w:2, d:'2026-06-11',s:'cp', t:'ChiliPalooza #1 — This or That',          f:'short',p:'LinkedIn · Instagram'},
-  {w:2, d:'2026-06-13',s:'gtm',t:'GTM Clawllective — Nicolas Interview #1', f:'short',p:'LinkedIn · Instagram'},
-  {w:3, d:'2026-06-16',s:'hw', t:'Hot Wins #2 — Full Interview',            f:'long', p:'LinkedIn · YouTube'},
-  {w:3, d:'2026-06-18',s:'cp', t:'ChiliPalooza #2 — Full Interview',        f:'long', p:'LinkedIn · YouTube'},
-  {w:3, d:'2026-06-20',s:'gtm',t:'GTM Clawllective — Demo Hack #2',         f:'short',p:'LinkedIn'},
-  {w:4, d:'2026-06-23',s:'hw', t:'Hot Wins #2 — Best Moment (Extract)',     f:'short',p:'LinkedIn · Instagram'},
-  {w:4, d:'2026-06-25',s:'cp', t:'ChiliPalooza #2 — This or That',          f:'short',p:'LinkedIn · Instagram'},
-  {w:4, d:'2026-06-27',s:'gtm',t:'GTM Clawllective — Nicolas Interview #2', f:'short',p:'LinkedIn · Instagram'},
-  {w:5, d:'2026-06-30',s:'hw', t:'Hot Wins #3 — Full Interview',            f:'long', p:'LinkedIn · YouTube'},
-  {w:5, d:'2026-07-02',s:'cp', t:'ChiliPalooza #3 — Full Interview',        f:'long', p:'LinkedIn · YouTube'},
-  {w:5, d:'2026-07-04',s:'gtm',t:'GTM Clawllective — Demo Hack #3',         f:'short',p:'LinkedIn'},
-  {w:6, d:'2026-07-07',s:'hw', t:'Hot Wins #3 — Best Moment (Extract)',     f:'short',p:'LinkedIn · Instagram'},
-  {w:6, d:'2026-07-09',s:'cp', t:'ChiliPalooza #3 — This or That',          f:'short',p:'LinkedIn · Instagram'},
-  {w:6, d:'2026-07-11',s:'gtm',t:'GTM Clawllective — Nicolas Interview #3', f:'short',p:'LinkedIn · Instagram'},
-  {w:7, d:'2026-07-14',s:'hw', t:'Hot Wins #4 — Full Interview',            f:'long', p:'LinkedIn · YouTube'},
-  {w:7, d:'2026-07-16',s:'cp', t:'ChiliPalooza #4 — Full Interview',        f:'long', p:'LinkedIn · YouTube'},
-  {w:7, d:'2026-07-18',s:'gtm',t:'GTM Clawllective — Demo Hack #4',         f:'short',p:'LinkedIn'},
-  {w:8, d:'2026-07-21',s:'hw', t:'Hot Wins #4 — Best Moment (Extract)',     f:'short',p:'LinkedIn · Instagram'},
-  {w:8, d:'2026-07-23',s:'cp', t:'ChiliPalooza #4 — This or That',          f:'short',p:'LinkedIn · Instagram'},
-  {w:8, d:'2026-07-25',s:'gtm',t:'GTM Clawllective — Nicolas Interview #4', f:'short',p:'LinkedIn · Instagram'},
-  {w:9, d:'2026-07-28',s:'hw', t:'Hot Wins #5 — Full Interview',            f:'long', p:'LinkedIn · YouTube'},
-  {w:9, d:'2026-07-30',s:'cp', t:'ChiliPalooza #5 — Full Interview',        f:'long', p:'LinkedIn · YouTube'},
-  {w:9, d:'2026-08-01',s:'gtm',t:'GTM Clawllective — Demo Hack #5',         f:'short',p:'LinkedIn'},
-  {w:10,d:'2026-08-04',s:'hw', t:'Hot Wins #5 — Best Moment (Extract)',     f:'short',p:'LinkedIn · Instagram'},
-  {w:10,d:'2026-08-06',s:'cp', t:'ChiliPalooza #5 — This or That',          f:'short',p:'LinkedIn · Instagram'},
-  {w:10,d:'2026-08-08',s:'gtm',t:'GTM Clawllective — Nicolas Interview #5', f:'short',p:'LinkedIn · Instagram'},
-  {w:11,d:'2026-08-11',s:'hw', t:'Hot Wins #6 — Full Interview',            f:'long', p:'LinkedIn · YouTube'},
-  {w:11,d:'2026-08-13',s:'cp', t:'ChiliPalooza #6 — Full Interview',        f:'long', p:'LinkedIn · YouTube'},
-  {w:11,d:'2026-08-15',s:'gtm',t:'GTM Clawllective — Demo Hack #6',         f:'short',p:'LinkedIn'},
-  {w:12,d:'2026-08-18',s:'hw', t:'Hot Wins #6 — Best Moment (Extract)',     f:'short',p:'LinkedIn · Instagram'},
-  {w:12,d:'2026-08-20',s:'cp', t:'ChiliPalooza #6 — This or That',          f:'short',p:'LinkedIn · Instagram'},
-  {w:12,d:'2026-08-22',s:'gtm',t:'GTM Clawllective — Nicolas Interview #6', f:'short',p:'LinkedIn · Instagram'},
-  {w:13,d:'2026-08-25',s:'hw', t:'Hot Wins #7 — Full Interview',            f:'long', p:'LinkedIn · YouTube'},
-  {w:13,d:'2026-08-27',s:'cp', t:'ChiliPalooza #7 — Full Interview',        f:'long', p:'LinkedIn · YouTube'},
-  {w:13,d:'2026-08-29',s:'gtm',t:'GTM Clawllective — Demo Hack #7',         f:'short',p:'LinkedIn'},
-  {w:14,d:'2026-09-01',s:'hw', t:'Hot Wins #7 — Best Moment (Extract)',     f:'short',p:'LinkedIn · Instagram'},
-  {w:14,d:'2026-09-03',s:'cp', t:'ChiliPalooza #7 — This or That',          f:'short',p:'LinkedIn · Instagram'},
-  {w:14,d:'2026-09-05',s:'gtm',t:'GTM Clawllective — Nicolas Interview #7', f:'short',p:'LinkedIn · Instagram'},
-  {w:15,d:'2026-09-08',s:'hw', t:'Hot Wins #8 — Full Interview',            f:'long', p:'LinkedIn · YouTube'},
-  {w:15,d:'2026-09-12',s:'gtm',t:'GTM Clawllective — Demo Hack #8',         f:'short',p:'LinkedIn'},
-  {w:16,d:'2026-09-15',s:'hw', t:'Hot Wins #8 — Best Moment (Extract)',     f:'short',p:'LinkedIn · Instagram'},
-  {w:16,d:'2026-09-19',s:'gtm',t:'GTM Clawllective — Nicolas Interview #8', f:'short',p:'LinkedIn · Instagram'},
-  {w:17,d:'2026-09-22',s:'hw', t:'Hot Wins #9 — Full Interview',            f:'long', p:'LinkedIn · YouTube'},
-  {w:17,d:'2026-09-26',s:'gtm',t:'GTM Clawllective — Demo Hack #9',         f:'short',p:'LinkedIn'},
-  {w:18,d:'2026-09-29',s:'hw', t:'Hot Wins #9 — Best Moment (Extract)',     f:'short',p:'LinkedIn · Instagram'},
-  {w:18,d:'2026-10-03',s:'gtm',t:'GTM Clawllective — Nicolas Interview #9', f:'short',p:'LinkedIn · Instagram'},
-  {w:19,d:'2026-10-06',s:'hw', t:'Hot Wins #10 — Full Interview',           f:'long', p:'LinkedIn · YouTube'},
-  {w:19,d:'2026-10-10',s:'gtm',t:'GTM Clawllective — Demo Hack #10',        f:'short',p:'LinkedIn'},
-  {w:20,d:'2026-10-13',s:'hw', t:'Hot Wins #10 — Best Moment (Extract)',    f:'short',p:'LinkedIn · Instagram'},
-  {w:20,d:'2026-10-17',s:'gtm',t:'GTM Clawllective — Nicolas Interview #10',f:'short',p:'LinkedIn · Instagram'},
-  {w:21,d:'2026-10-20',s:'hw', t:'Hot Wins #11 — Full Interview',           f:'long', p:'LinkedIn · YouTube'},
-  {w:21,d:'2026-10-24',s:'gtm',t:'GTM Clawllective — Demo Hack #11',        f:'short',p:'LinkedIn'},
-  {w:22,d:'2026-10-27',s:'hw', t:'Hot Wins #11 — Best Moment (Extract)',    f:'short',p:'LinkedIn · Instagram'},
-  {w:22,d:'2026-10-31',s:'gtm',t:'GTM Clawllective — Nicolas Interview #11',f:'short',p:'LinkedIn · Instagram'},
+  // Week 1 (Jun 2–6)
+  {w:1, d:'2026-06-02',s:'hw', t:'Hot Wins #1 — Full Interview',             f:'long', p:'LinkedIn · YouTube'},
+  {w:1, d:'2026-06-03',s:'cp', t:'ChiliPalooza #1 — Full Interview',         f:'long', p:'LinkedIn · YouTube'},
+  {w:1, d:'2026-06-04',s:'hw', t:'Hot Wins #1 — Best Moment (Extract)',      f:'short',p:'LinkedIn · Instagram'},
+  {w:1, d:'2026-06-05',s:'cp', t:'ChiliPalooza #1 — This or That',           f:'short',p:'LinkedIn · Instagram'},
+  {w:1, d:'2026-06-06',s:'gtm',t:'GTM Clawllective — Demo Hack #1',          f:'short',p:'LinkedIn'},
+  // Week 2 (Jun 9–13)
+  {w:2, d:'2026-06-09',s:'hw', t:'Hot Wins #2 — Full Interview',             f:'long', p:'LinkedIn · YouTube'},
+  {w:2, d:'2026-06-10',s:'cp', t:'ChiliPalooza #2 — Full Interview',         f:'long', p:'LinkedIn · YouTube'},
+  {w:2, d:'2026-06-11',s:'hw', t:'Hot Wins #2 — Best Moment (Extract)',      f:'short',p:'LinkedIn · Instagram'},
+  {w:2, d:'2026-06-12',s:'cp', t:'ChiliPalooza #2 — This or That',           f:'short',p:'LinkedIn · Instagram'},
+  {w:2, d:'2026-06-13',s:'gtm',t:'GTM Clawllective — Nicolas Interview #1',  f:'short',p:'LinkedIn · Instagram'},
+  // Week 3 (Jun 16–20)
+  {w:3, d:'2026-06-16',s:'hw', t:'Hot Wins #3 — Full Interview',             f:'long', p:'LinkedIn · YouTube'},
+  {w:3, d:'2026-06-17',s:'cp', t:'ChiliPalooza #3 — Full Interview',         f:'long', p:'LinkedIn · YouTube'},
+  {w:3, d:'2026-06-18',s:'hw', t:'Hot Wins #3 — Best Moment (Extract)',      f:'short',p:'LinkedIn · Instagram'},
+  {w:3, d:'2026-06-19',s:'cp', t:'ChiliPalooza #3 — This or That',           f:'short',p:'LinkedIn · Instagram'},
+  {w:3, d:'2026-06-20',s:'gtm',t:'GTM Clawllective — Demo Hack #2',          f:'short',p:'LinkedIn'},
+  // Week 4 (Jun 23–27)
+  {w:4, d:'2026-06-23',s:'hw', t:'Hot Wins #4 — Full Interview',             f:'long', p:'LinkedIn · YouTube'},
+  {w:4, d:'2026-06-24',s:'cp', t:'ChiliPalooza #4 — Full Interview',         f:'long', p:'LinkedIn · YouTube'},
+  {w:4, d:'2026-06-25',s:'hw', t:'Hot Wins #4 — Best Moment (Extract)',      f:'short',p:'LinkedIn · Instagram'},
+  {w:4, d:'2026-06-26',s:'cp', t:'ChiliPalooza #4 — This or That',           f:'short',p:'LinkedIn · Instagram'},
+  {w:4, d:'2026-06-27',s:'gtm',t:'GTM Clawllective — Nicolas Interview #2',  f:'short',p:'LinkedIn · Instagram'},
+  // Week 5 (Jun 30–Jul 4)
+  {w:5, d:'2026-06-30',s:'hw', t:'Hot Wins #5 — Full Interview',             f:'long', p:'LinkedIn · YouTube'},
+  {w:5, d:'2026-07-01',s:'cp', t:'ChiliPalooza #5 — Full Interview',         f:'long', p:'LinkedIn · YouTube'},
+  {w:5, d:'2026-07-02',s:'hw', t:'Hot Wins #5 — Best Moment (Extract)',      f:'short',p:'LinkedIn · Instagram'},
+  {w:5, d:'2026-07-03',s:'cp', t:'ChiliPalooza #5 — This or That',           f:'short',p:'LinkedIn · Instagram'},
+  {w:5, d:'2026-07-04',s:'gtm',t:'GTM Clawllective — Demo Hack #3',          f:'short',p:'LinkedIn'},
+  // Week 6 (Jul 7–11)
+  {w:6, d:'2026-07-07',s:'hw', t:'Hot Wins #6 — Full Interview',             f:'long', p:'LinkedIn · YouTube'},
+  {w:6, d:'2026-07-08',s:'cp', t:'ChiliPalooza #6 — Full Interview',         f:'long', p:'LinkedIn · YouTube'},
+  {w:6, d:'2026-07-09',s:'hw', t:'Hot Wins #6 — Best Moment (Extract)',      f:'short',p:'LinkedIn · Instagram'},
+  {w:6, d:'2026-07-10',s:'cp', t:'ChiliPalooza #6 — This or That',           f:'short',p:'LinkedIn · Instagram'},
+  {w:6, d:'2026-07-11',s:'gtm',t:'GTM Clawllective — Nicolas Interview #3',  f:'short',p:'LinkedIn · Instagram'},
+  // Week 7 (Jul 14–18)
+  {w:7, d:'2026-07-14',s:'hw', t:'Hot Wins #7 — Full Interview',             f:'long', p:'LinkedIn · YouTube'},
+  {w:7, d:'2026-07-15',s:'cp', t:'ChiliPalooza #7 — Full Interview',         f:'long', p:'LinkedIn · YouTube'},
+  {w:7, d:'2026-07-16',s:'hw', t:'Hot Wins #7 — Best Moment (Extract)',      f:'short',p:'LinkedIn · Instagram'},
+  {w:7, d:'2026-07-17',s:'cp', t:'ChiliPalooza #7 — This or That',           f:'short',p:'LinkedIn · Instagram'},
+  {w:7, d:'2026-07-18',s:'gtm',t:'GTM Clawllective — Demo Hack #4',          f:'short',p:'LinkedIn'},
+  // Week 8 (Jul 21–25)
+  {w:8, d:'2026-07-21',s:'hw', t:'Hot Wins #8 — Full Interview',             f:'long', p:'LinkedIn · YouTube'},
+  {w:8, d:'2026-07-22',s:'cp', t:'ChiliPalooza #8 — Full Interview',         f:'long', p:'LinkedIn · YouTube'},
+  {w:8, d:'2026-07-23',s:'hw', t:'Hot Wins #8 — Best Moment (Extract)',      f:'short',p:'LinkedIn · Instagram'},
+  {w:8, d:'2026-07-24',s:'cp', t:'ChiliPalooza #8 — This or That',           f:'short',p:'LinkedIn · Instagram'},
+  {w:8, d:'2026-07-25',s:'gtm',t:'GTM Clawllective — Nicolas Interview #4',  f:'short',p:'LinkedIn · Instagram'},
+  // Week 9 (Jul 28–Aug 1)
+  {w:9, d:'2026-07-28',s:'hw', t:'Hot Wins #9 — Full Interview',             f:'long', p:'LinkedIn · YouTube'},
+  {w:9, d:'2026-07-29',s:'cp', t:'ChiliPalooza #9 — Full Interview',         f:'long', p:'LinkedIn · YouTube'},
+  {w:9, d:'2026-07-30',s:'hw', t:'Hot Wins #9 — Best Moment (Extract)',      f:'short',p:'LinkedIn · Instagram'},
+  {w:9, d:'2026-07-31',s:'cp', t:'ChiliPalooza #9 — This or That',           f:'short',p:'LinkedIn · Instagram'},
+  {w:9, d:'2026-08-01',s:'gtm',t:'GTM Clawllective — Demo Hack #5',          f:'short',p:'LinkedIn'},
+  // Week 10 (Aug 4–8)
+  {w:10,d:'2026-08-04',s:'hw', t:'Hot Wins #10 — Full Interview',            f:'long', p:'LinkedIn · YouTube'},
+  {w:10,d:'2026-08-05',s:'cp', t:'ChiliPalooza #10 — Full Interview',        f:'long', p:'LinkedIn · YouTube'},
+  {w:10,d:'2026-08-06',s:'hw', t:'Hot Wins #10 — Best Moment (Extract)',     f:'short',p:'LinkedIn · Instagram'},
+  {w:10,d:'2026-08-07',s:'cp', t:'ChiliPalooza #10 — This or That',          f:'short',p:'LinkedIn · Instagram'},
+  {w:10,d:'2026-08-08',s:'gtm',t:'GTM Clawllective — Nicolas Interview #5',  f:'short',p:'LinkedIn · Instagram'},
+  // Week 11 (Aug 11–15)
+  {w:11,d:'2026-08-11',s:'hw', t:'Hot Wins #11 — Full Interview',            f:'long', p:'LinkedIn · YouTube'},
+  {w:11,d:'2026-08-12',s:'cp', t:'ChiliPalooza #11 — Full Interview',        f:'long', p:'LinkedIn · YouTube'},
+  {w:11,d:'2026-08-13',s:'hw', t:'Hot Wins #11 — Best Moment (Extract)',     f:'short',p:'LinkedIn · Instagram'},
+  {w:11,d:'2026-08-14',s:'cp', t:'ChiliPalooza #11 — This or That',          f:'short',p:'LinkedIn · Instagram'},
+  {w:11,d:'2026-08-15',s:'gtm',t:'GTM Clawllective — Demo Hack #6',          f:'short',p:'LinkedIn'},
+  // Week 12 (Aug 18–22)
+  {w:12,d:'2026-08-18',s:'hw', t:'Hot Wins #12 — Full Interview',            f:'long', p:'LinkedIn · YouTube'},
+  {w:12,d:'2026-08-19',s:'cp', t:'ChiliPalooza #12 — Full Interview',        f:'long', p:'LinkedIn · YouTube'},
+  {w:12,d:'2026-08-20',s:'hw', t:'Hot Wins #12 — Best Moment (Extract)',     f:'short',p:'LinkedIn · Instagram'},
+  {w:12,d:'2026-08-21',s:'cp', t:'ChiliPalooza #12 — This or That',          f:'short',p:'LinkedIn · Instagram'},
+  {w:12,d:'2026-08-22',s:'gtm',t:'GTM Clawllective — Nicolas Interview #6',  f:'short',p:'LinkedIn · Instagram'},
+  // Week 13 (Aug 25–29)
+  {w:13,d:'2026-08-25',s:'hw', t:'Hot Wins #13 — Full Interview',            f:'long', p:'LinkedIn · YouTube'},
+  {w:13,d:'2026-08-26',s:'cp', t:'ChiliPalooza #13 — Full Interview',        f:'long', p:'LinkedIn · YouTube'},
+  {w:13,d:'2026-08-27',s:'hw', t:'Hot Wins #13 — Best Moment (Extract)',     f:'short',p:'LinkedIn · Instagram'},
+  {w:13,d:'2026-08-28',s:'cp', t:'ChiliPalooza #13 — This or That',          f:'short',p:'LinkedIn · Instagram'},
+  {w:13,d:'2026-08-29',s:'gtm',t:'GTM Clawllective — Demo Hack #7',          f:'short',p:'LinkedIn'},
+  // Week 14 (Sep 1–5)
+  {w:14,d:'2026-09-01',s:'hw', t:'Hot Wins #14 — Full Interview',            f:'long', p:'LinkedIn · YouTube'},
+  {w:14,d:'2026-09-02',s:'cp', t:'ChiliPalooza #14 — Full Interview',        f:'long', p:'LinkedIn · YouTube'},
+  {w:14,d:'2026-09-03',s:'hw', t:'Hot Wins #14 — Best Moment (Extract)',     f:'short',p:'LinkedIn · Instagram'},
+  {w:14,d:'2026-09-04',s:'cp', t:'ChiliPalooza #14 — This or That',          f:'short',p:'LinkedIn · Instagram'},
+  {w:14,d:'2026-09-05',s:'gtm',t:'GTM Clawllective — Nicolas Interview #7',  f:'short',p:'LinkedIn · Instagram'},
+  // Week 15 (Sep 8–12)
+  {w:15,d:'2026-09-08',s:'hw', t:'Hot Wins #15 — Full Interview',            f:'long', p:'LinkedIn · YouTube'},
+  {w:15,d:'2026-09-09',s:'cp', t:'ChiliPalooza #15 — Full Interview',        f:'long', p:'LinkedIn · YouTube'},
+  {w:15,d:'2026-09-10',s:'hw', t:'Hot Wins #15 — Best Moment (Extract)',     f:'short',p:'LinkedIn · Instagram'},
+  {w:15,d:'2026-09-11',s:'cp', t:'ChiliPalooza #15 — This or That',          f:'short',p:'LinkedIn · Instagram'},
+  {w:15,d:'2026-09-12',s:'gtm',t:'GTM Clawllective — Demo Hack #8',          f:'short',p:'LinkedIn'},
+  // Week 16 (Sep 15–19)
+  {w:16,d:'2026-09-15',s:'hw', t:'Hot Wins #16 — Full Interview',            f:'long', p:'LinkedIn · YouTube'},
+  {w:16,d:'2026-09-16',s:'cp', t:'ChiliPalooza #16 — Full Interview',        f:'long', p:'LinkedIn · YouTube'},
+  {w:16,d:'2026-09-17',s:'hw', t:'Hot Wins #16 — Best Moment (Extract)',     f:'short',p:'LinkedIn · Instagram'},
+  {w:16,d:'2026-09-18',s:'cp', t:'ChiliPalooza #16 — This or That',          f:'short',p:'LinkedIn · Instagram'},
+  {w:16,d:'2026-09-19',s:'gtm',t:'GTM Clawllective — Nicolas Interview #8',  f:'short',p:'LinkedIn · Instagram'},
+  // Week 17 (Sep 22–26)
+  {w:17,d:'2026-09-22',s:'hw', t:'Hot Wins #17 — Full Interview',            f:'long', p:'LinkedIn · YouTube'},
+  {w:17,d:'2026-09-23',s:'cp', t:'ChiliPalooza #17 — Full Interview',        f:'long', p:'LinkedIn · YouTube'},
+  {w:17,d:'2026-09-24',s:'hw', t:'Hot Wins #17 — Best Moment (Extract)',     f:'short',p:'LinkedIn · Instagram'},
+  {w:17,d:'2026-09-25',s:'cp', t:'ChiliPalooza #17 — This or That',          f:'short',p:'LinkedIn · Instagram'},
+  {w:17,d:'2026-09-26',s:'gtm',t:'GTM Clawllective — Demo Hack #9',          f:'short',p:'LinkedIn'},
+  // Week 18 (Sep 29–Oct 3)
+  {w:18,d:'2026-09-29',s:'hw', t:'Hot Wins #18 — Full Interview',            f:'long', p:'LinkedIn · YouTube'},
+  {w:18,d:'2026-09-30',s:'cp', t:'ChiliPalooza #18 — Full Interview',        f:'long', p:'LinkedIn · YouTube'},
+  {w:18,d:'2026-10-01',s:'hw', t:'Hot Wins #18 — Best Moment (Extract)',     f:'short',p:'LinkedIn · Instagram'},
+  {w:18,d:'2026-10-02',s:'cp', t:'ChiliPalooza #18 — This or That',          f:'short',p:'LinkedIn · Instagram'},
+  {w:18,d:'2026-10-03',s:'gtm',t:'GTM Clawllective — Nicolas Interview #9',  f:'short',p:'LinkedIn · Instagram'},
+  // Week 19 (Oct 6–10)
+  {w:19,d:'2026-10-06',s:'hw', t:'Hot Wins #19 — Full Interview',            f:'long', p:'LinkedIn · YouTube'},
+  {w:19,d:'2026-10-07',s:'cp', t:'ChiliPalooza #19 — Full Interview',        f:'long', p:'LinkedIn · YouTube'},
+  {w:19,d:'2026-10-08',s:'hw', t:'Hot Wins #19 — Best Moment (Extract)',     f:'short',p:'LinkedIn · Instagram'},
+  {w:19,d:'2026-10-09',s:'cp', t:'ChiliPalooza #19 — This or That',          f:'short',p:'LinkedIn · Instagram'},
+  {w:19,d:'2026-10-10',s:'gtm',t:'GTM Clawllective — Demo Hack #10',         f:'short',p:'LinkedIn'},
+  // Week 20 (Oct 13–17)
+  {w:20,d:'2026-10-13',s:'hw', t:'Hot Wins #20 — Full Interview',            f:'long', p:'LinkedIn · YouTube'},
+  {w:20,d:'2026-10-14',s:'cp', t:'ChiliPalooza #20 — Full Interview',        f:'long', p:'LinkedIn · YouTube'},
+  {w:20,d:'2026-10-15',s:'hw', t:'Hot Wins #20 — Best Moment (Extract)',     f:'short',p:'LinkedIn · Instagram'},
+  {w:20,d:'2026-10-16',s:'cp', t:'ChiliPalooza #20 — This or That',          f:'short',p:'LinkedIn · Instagram'},
+  {w:20,d:'2026-10-17',s:'gtm',t:'GTM Clawllective — Nicolas Interview #10', f:'short',p:'LinkedIn · Instagram'},
+  // Week 21 (Oct 20–24)
+  {w:21,d:'2026-10-20',s:'hw', t:'Hot Wins #21 — Full Interview',            f:'long', p:'LinkedIn · YouTube'},
+  {w:21,d:'2026-10-21',s:'cp', t:'ChiliPalooza #21 — Full Interview',        f:'long', p:'LinkedIn · YouTube'},
+  {w:21,d:'2026-10-22',s:'hw', t:'Hot Wins #21 — Best Moment (Extract)',     f:'short',p:'LinkedIn · Instagram'},
+  {w:21,d:'2026-10-23',s:'cp', t:'ChiliPalooza #21 — This or That',          f:'short',p:'LinkedIn · Instagram'},
+  {w:21,d:'2026-10-24',s:'gtm',t:'GTM Clawllective — Demo Hack #11',         f:'short',p:'LinkedIn'},
+  // Week 22 (Oct 27–31)
+  {w:22,d:'2026-10-27',s:'hw', t:'Hot Wins #22 — Full Interview',            f:'long', p:'LinkedIn · YouTube'},
+  {w:22,d:'2026-10-28',s:'cp', t:'ChiliPalooza #22 — Full Interview',        f:'long', p:'LinkedIn · YouTube'},
+  {w:22,d:'2026-10-29',s:'hw', t:'Hot Wins #22 — Best Moment (Extract)',     f:'short',p:'LinkedIn · Instagram'},
+  {w:22,d:'2026-10-30',s:'cp', t:'ChiliPalooza #22 — This or That',          f:'short',p:'LinkedIn · Instagram'},
+  {w:22,d:'2026-10-31',s:'gtm',t:'GTM Clawllective — Nicolas Interview #11', f:'short',p:'LinkedIn · Instagram'},
 ];
 
 const MONTHS = [
@@ -445,7 +520,7 @@ function renderCal() {
 }
 
 // ─── SWITCHING ───────────────────────────────────────────────────────────────
-let currentView = 'list';
+let currentView = 'cal';
 
 function switchView(v) {
   currentView = v;
@@ -484,7 +559,7 @@ document.querySelectorAll('.month-btn').forEach(btn => {
 
 async function init() {
   if (SHEET_CSV_URL) {
-    document.getElementById('list-view').innerHTML =
+    document.getElementById('cal-view').innerHTML =
       '<p style="text-align:center;padding:48px;color:var(--mgray);font-style:italic">Loading data from Google Sheets...</p>';
     const live = await fetchSheet();
     if (live) { EV = live; buildIndex(); }

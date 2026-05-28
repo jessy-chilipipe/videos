@@ -51,9 +51,11 @@ body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--black);f
 .view-toggle{display:flex;background:var(--white);border:1.5px solid var(--lgray);border-radius:34px;padding:3px;gap:2px;flex-shrink:0}
 .view-btn{padding:7px 20px;border-radius:34px;border:none;background:transparent;color:var(--dgray);font-size:13px;font-weight:600;font-family:'Inter',sans-serif;cursor:pointer;transition:all .15s ease}
 .view-btn.active{background:var(--black);color:var(--white)}
-.month-nav{display:flex;gap:6px;flex-wrap:wrap}
-.month-btn{padding:7px 16px;border-radius:34px;border:1.5px solid var(--lgray);background:var(--white);color:var(--dgray);font-size:13px;font-weight:600;font-family:'Inter',sans-serif;cursor:pointer;transition:all .15s ease;text-decoration:none;display:inline-block}
-.month-btn:hover,.month-btn.active{background:var(--chili);border-color:var(--chili);color:var(--white)}
+.cal-nav{display:flex;align-items:center;gap:10px}
+.cal-nav-label{font-weight:700;font-size:14px;color:var(--black);min-width:110px;text-align:center;letter-spacing:-.01em}
+.arrow-btn{width:34px;height:34px;border-radius:50%;border:1.5px solid var(--lgray);background:var(--white);color:var(--dgray);font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .15s;padding:0;font-family:'Inter',sans-serif;line-height:1}
+.arrow-btn:hover:not(:disabled){background:var(--chili);border-color:var(--chili);color:var(--white)}
+.arrow-btn:disabled{opacity:.3;cursor:default}
 
 /* ── LIST VIEW ── */
 .month-section{margin-bottom:52px}
@@ -84,7 +86,7 @@ tr.gtm .sbadge{color:var(--blue);  background:#D0D8FF}
 .fmt{display:inline-block;font-weight:700;font-size:11px;padding:3px 10px;border-radius:34px;white-space:nowrap}
 .fmt-long {color:var(--blue); background:#D8E2FF}
 .fmt-short{color:var(--green);background:#CFFAE8}
-.fmt-rf   {color:#CC5500;    background:#FFE9D6}
+.fmt-rf   {color:var(--green);background:#CFFAE8}
 .td-day{color:var(--dgray);white-space:nowrap;font-size:12px}
 .td-content{color:var(--black);font-weight:500}
 .td-plat{color:var(--dgray);font-size:12px}
@@ -141,7 +143,7 @@ tr.gtm .sbadge{color:var(--blue);  background:#D0D8FF}
     <span class="chip chip-gtm"><span class="dot"></span>GTM Clawllective</span>
     <span class="chip chip-long"><span class="dot"></span>Long = LinkedIn + YouTube</span>
     <span class="chip chip-short"><span class="dot"></span>Short = LinkedIn + Instagram</span>
-    <span class="chip" style="background:#FFE9D6;color:#CC5500;border-color:#FFCCAA"><span class="dot" style="background:#CC5500"></span>Rapid Fire = teaser J-1</span>
+    <span class="chip chip-short"><span class="dot"></span>Rapid Fire = teaser J-1 (Short)</span>
   </div>
 </header>
 
@@ -173,10 +175,10 @@ tr.gtm .sbadge{color:var(--blue);  background:#D0D8FF}
     <button class="view-btn" id="btn-list" onclick="switchView('list')">☰  List</button>
     <button class="view-btn active" id="btn-cal" onclick="switchView('cal')">⊞  Calendar</button>
   </div>
-  <nav class="month-nav" id="month-nav">
-    <a href="#june"   class="month-btn active">June</a>
-    <a href="#july"   class="month-btn">July</a>
-    <a href="#august" class="month-btn">August</a>
+  <nav id="cal-nav" class="cal-nav">
+    <button id="btn-prev-mo" class="arrow-btn" onclick="prevMonth()">‹</button>
+    <span id="cal-nav-label" class="cal-nav-label">June 2026</span>
+    <button id="btn-next-mo" class="arrow-btn" onclick="nextMonth()">›</button>
   </nav>
 </div>
 
@@ -438,7 +440,7 @@ function renderList() {
       h += `<div class="week-header"><span class="week-label">Week ${wn}</span><span class="week-dates">${WM[wn]}</span><span class="week-count">${rows.length} post${rows.length>1?'s':''}</span></div>`;
       h += `<table class="list-table"><thead><tr><th style="width:120px">Day</th><th style="width:140px">Series</th><th>Content</th><th class="c" style="width:80px">Format</th><th style="width:200px">Platforms</th></tr></thead><tbody>`;
       rows.forEach(e => {
-        h += `<tr class="${e.s}"><td class="td-day">${dayLabel(e.d)}</td><td><span class="sbadge">${SM[e.s].label}</span></td><td class="td-content">${e.t}</td><td class="c"><span class="fmt fmt-${e.f}">${e.f==='long'?'Long':e.f==='rf'?'Rapid Fire':'Short'}</span></td><td class="td-plat">${e.p}</td></tr>`;
+        h += `<tr class="${e.s}"><td class="td-day">${dayLabel(e.d)}</td><td><span class="sbadge">${SM[e.s].label}</span></td><td class="td-content">${e.t}</td><td class="c"><span class="fmt fmt-${e.f}">${e.f==='long'?'Long':'Short'}</span></td><td class="td-plat">${e.p}</td></tr>`;
       });
       h += `</tbody></table></div>`;
     });
@@ -448,48 +450,47 @@ function renderList() {
 }
 
 // ─── CALENDAR VIEW ───────────────────────────────────────────────────────────
+let calMonthIdx = 0;
+
 function renderCal() {
+  const mo = MONTHS[calMonthIdx];
   const DOW = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
-  let h = '';
-  MONTHS.forEach(mo => {
-    const firstDow = (new Date(mo.year, mo.m, 1).getDay() + 6) % 7; // Mon=0
-    const daysInMo = new Date(mo.year, mo.m + 1, 0).getDate();
-
-    h += `<section class="cal-month" id="${mo.id}-cal">`;
-    h += `<h2 class="cal-month-title">${mo.name} 2026</h2>`;
-    h += `<div class="cal-grid">`;
-    DOW.forEach(d => { h += `<div class="cal-dow">${d}</div>`; });
-
-    for (let i = 0; i < firstDow; i++) h += `<div class="cal-cell empty wknd"></div>`;
-
-    for (let day = 1; day <= daysInMo; day++) {
-      const ds = `${mo.year}-${String(mo.m+1).padStart(2,'0')}-${String(day).padStart(2,'0')}`;
-      const dow = (new Date(mo.year, mo.m, day).getDay() + 6) % 7;
-      const isWknd = dow >= 5;
-      const evs = byDate[ds] || [];
-      h += `<div class="cal-cell${isWknd?' wknd':''}">`;
-      h += `<div class="cal-num">${day}</div>`;
-      evs.forEach(e => {
-        // Short label for the cell
-        const short = e.t
-          .replace('Hot Wins','HW')
-          .replace('ChiliPalooza','CP')
-          .replace('GTM Clawllective','GTM')
-          .replace('Rapid Fire','RF');
-        const fmtLabel = e.f === 'long' ? ' · Long' : e.f === 'rf' ? ' · Rapid Fire' : ' · Short';
-        h += `<span class="cal-ev cal-ev-${e.s}" title="${e.t}${fmtLabel} · ${e.p}">${short}</span>`;
-      });
-      h += `</div>`;
-    }
-
-    const total = firstDow + daysInMo;
-    const rem = total % 7;
-    if (rem) for (let i = 0; i < 7-rem; i++) h += `<div class="cal-cell empty wknd"></div>`;
-
-    h += `</div></section>`;
-  });
+  const firstDow = (new Date(mo.year, mo.m, 1).getDay() + 6) % 7;
+  const daysInMo = new Date(mo.year, mo.m + 1, 0).getDate();
+  let h = `<section class="cal-month" id="${mo.id}-cal"><div class="cal-grid">`;
+  DOW.forEach(d => { h += `<div class="cal-dow">${d}</div>`; });
+  for (let i = 0; i < firstDow; i++) h += `<div class="cal-cell empty wknd"></div>`;
+  for (let day = 1; day <= daysInMo; day++) {
+    const ds = `${mo.year}-${String(mo.m+1).padStart(2,'0')}-${String(day).padStart(2,'0')}`;
+    const dow = (new Date(mo.year, mo.m, day).getDay() + 6) % 7;
+    const isWknd = dow >= 5;
+    const evs = byDate[ds] || [];
+    h += `<div class="cal-cell${isWknd?' wknd':''}"><div class="cal-num">${day}</div>`;
+    evs.forEach(e => {
+      const short = e.t
+        .replace('Hot Wins','HW').replace('ChiliPalooza','CP')
+        .replace('GTM Clawllective','GTM').replace('Rapid Fire','RF');
+      const fmtLabel = e.f === 'long' ? ' · Long' : ' · Short';
+      h += `<span class="cal-ev cal-ev-${e.s}" title="${e.t}${fmtLabel} · ${e.p}">${short}</span>`;
+    });
+    h += `</div>`;
+  }
+  const rem = (firstDow + daysInMo) % 7;
+  if (rem) for (let i = 0; i < 7-rem; i++) h += `<div class="cal-cell empty wknd"></div>`;
+  h += `</div></section>`;
   document.getElementById('cal-view').innerHTML = h;
+  updateCalNav();
 }
+
+function updateCalNav() {
+  const mo = MONTHS[calMonthIdx];
+  document.getElementById('cal-nav-label').textContent = `${mo.name} ${mo.year}`;
+  document.getElementById('btn-prev-mo').disabled = calMonthIdx === 0;
+  document.getElementById('btn-next-mo').disabled = calMonthIdx === MONTHS.length - 1;
+}
+
+function prevMonth() { if (calMonthIdx > 0) { calMonthIdx--; renderCal(); } }
+function nextMonth() { if (calMonthIdx < MONTHS.length - 1) { calMonthIdx++; renderCal(); } }
 
 // ─── SWITCHING ───────────────────────────────────────────────────────────────
 let currentView = 'cal';
@@ -500,34 +501,10 @@ function switchView(v) {
   document.getElementById('cal-view').style.display  = v==='cal'  ? 'block' : 'none';
   document.getElementById('btn-list').classList.toggle('active', v==='list');
   document.getElementById('btn-cal').classList.toggle('active',  v==='cal');
-  // Sync nav hrefs
-  document.querySelectorAll('.month-nav .month-btn').forEach(btn => {
-    const base = btn.getAttribute('href').replace('#','').replace('-cal','');
-    btn.setAttribute('href', v==='cal' ? `#${base}-cal` : `#${base}`);
-  });
+  document.getElementById('cal-nav').style.display = v==='cal' ? 'flex' : 'none';
 }
 
-// Scroll spy — works for both views
-function setupSpy() {
-  const io = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (!e.isIntersecting) return;
-      const base = e.target.id.replace('-cal','');
-      document.querySelectorAll('.month-btn').forEach(b => b.classList.remove('active'));
-      const a = document.querySelector(`.month-btn[href="#${base}"], .month-btn[href="#${base}-cal"]`);
-      if (a) a.classList.add('active');
-    });
-  }, {threshold: 0.15});
-  document.querySelectorAll('.month-section, .cal-month').forEach(s => io.observe(s));
-}
-
-// Month nav click
-document.querySelectorAll('.month-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.month-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-  });
-});
+function setupSpy() {}
 
 async function init() {
   if (SHEET_CSV_URL) {

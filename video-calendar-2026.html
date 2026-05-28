@@ -136,14 +136,13 @@ tr.gtm .sbadge{color:var(--blue);  background:#D0D8FF}
 <header class="header">
   <span class="eyebrow">Video Content Calendar</span>
   <h1 class="title"><span>Chili Piper</span> — Video Content Calendar</h1>
-  <p class="subtitle">June – August 2026 &nbsp;·&nbsp; 11 weeks &nbsp;·&nbsp; 98 posts &nbsp;·&nbsp; LinkedIn · YouTube · Instagram</p>
+  <p class="subtitle">June – December 2026 &nbsp;·&nbsp; 30 weeks &nbsp;·&nbsp; 117 posts &nbsp;·&nbsp; LinkedIn · YouTube · Instagram</p>
   <div class="legend">
     <span class="chip chip-hw"><span class="dot"></span>Hot Wins</span>
     <span class="chip chip-cp"><span class="dot"></span>ChiliPalooza</span>
     <span class="chip chip-gtm"><span class="dot"></span>GTM Clawllective</span>
     <span class="chip chip-long"><span class="dot"></span>Long = LinkedIn + YouTube</span>
     <span class="chip chip-short"><span class="dot"></span>Short = LinkedIn + Instagram</span>
-    <span class="chip chip-short"><span class="dot"></span>Rapid Fire = teaser J-1 (Short)</span>
   </div>
 </header>
 
@@ -155,8 +154,8 @@ tr.gtm .sbadge{color:var(--blue);  background:#D0D8FF}
       <li><strong>Tue</strong>: Hot Wins Full Interview + ChiliPalooza Rapid Fire (teases Wed)</li>
       <li><strong>Wed</strong>: ChiliPalooza Full Interview + Hot Wins Rapid Fire (teases Thu)</li>
       <li><strong>Thu</strong>: Hot Wins Full Interview</li>
-      <li><strong>Fri</strong>: GTM Clawllective — Demo Hack</li>
-      <li><strong>Sun</strong> (weeks 2–11): ChiliPalooza Rapid Fire (teases Mon's full)</li>
+      <li><strong>Fri</strong>: GTM Demo + ChiliPalooza Rapid Fire (teases Mon, weeks 1–10)</li>
+      <li>No weekend posts</li>
     </ul>
   </div>
   <div class="info-card">
@@ -164,8 +163,8 @@ tr.gtm .sbadge{color:var(--blue);  background:#D0D8FF}
     <ul>
       <li><strong>22 Hot Wins Full Interviews</strong> + 22 Rapid Fire teasers</li>
       <li><strong>22 ChiliPalooza Full Interviews</strong> + 21 Rapid Fire teasers</li>
-      <li><strong>11 GTM Clawllective Demo Hacks</strong> (every Friday)</li>
-      <li>Total: <strong>98 posts</strong> over 11 weeks (Jun – Aug 2026)</li>
+      <li><strong>30 GTM Demo Hacks</strong> (every Friday — Jun → Dec 2026)</li>
+      <li>Total: <strong>117 posts</strong> over 30 weeks (Jun – Dec 2026)</li>
     </ul>
   </div>
 </div>
@@ -280,13 +279,18 @@ const SM = {
 };
 
 const WM = {
-  1:'Jun 1 – 5',      2:'Jun 7 – 12',    3:'Jun 14 – 19',    4:'Jun 21 – 26',
-  5:'Jun 28 – Jul 3', 6:'Jul 5 – 10',    7:'Jul 12 – 17',    8:'Jul 19 – 24',
-  9:'Jul 26 – 31',   10:'Aug 2 – 7',    11:'Aug 9 – 14',
+  1:'Jun 1 – 5',      2:'Jun 8 – 12',    3:'Jun 15 – 19',    4:'Jun 22 – 26',
+  5:'Jun 29 – Jul 3', 6:'Jul 6 – 10',    7:'Jul 13 – 17',    8:'Jul 20 – 24',
+  9:'Jul 27 – 31',   10:'Aug 3 – 7',    11:'Aug 10 – 14',
+ 12:'Aug 21',        13:'Aug 28',        14:'Sep 4',          15:'Sep 11',
+ 16:'Sep 18',        17:'Sep 25',        18:'Oct 2',          19:'Oct 9',
+ 20:'Oct 16',        21:'Oct 23',        22:'Oct 30',         23:'Nov 6',
+ 24:'Nov 13',        25:'Nov 20',        26:'Nov 27',         27:'Dec 4',
+ 28:'Dec 11',        29:'Dec 18',        30:'Dec 25',
 };
 
 let EV = [
-  // Week 1 (Jun 1–5) — no CP RF for #1 (would be May 31)
+  // ── Week 1 (Jun 1–5) ─────────────────────────────────────────────────────
   {w:1, d:'2026-06-01',s:'cp', t:'ChiliPalooza #1 — Full Interview',         f:'long', p:'LinkedIn · YouTube'},
   {w:1, d:'2026-06-01',s:'hw', t:'Hot Wins #1 — Rapid Fire',                 f:'rf',   p:'LinkedIn · Instagram'},
   {w:1, d:'2026-06-02',s:'hw', t:'Hot Wins #1 — Full Interview',             f:'long', p:'LinkedIn · YouTube'},
@@ -295,8 +299,8 @@ let EV = [
   {w:1, d:'2026-06-03',s:'hw', t:'Hot Wins #2 — Rapid Fire',                 f:'rf',   p:'LinkedIn · Instagram'},
   {w:1, d:'2026-06-04',s:'hw', t:'Hot Wins #2 — Full Interview',             f:'long', p:'LinkedIn · YouTube'},
   {w:1, d:'2026-06-05',s:'gtm',t:'GTM Clawllective — Demo Hack #1',          f:'short',p:'LinkedIn'},
-  // Week 2 (Jun 7–12)
-  {w:2, d:'2026-06-07',s:'cp', t:'ChiliPalooza #3 — Rapid Fire',             f:'rf',   p:'LinkedIn · Instagram'},
+  {w:1, d:'2026-06-05',s:'cp', t:'ChiliPalooza #3 — Rapid Fire',             f:'rf',   p:'LinkedIn · Instagram'},
+  // ── Week 2 (Jun 8–12) ────────────────────────────────────────────────────
   {w:2, d:'2026-06-08',s:'cp', t:'ChiliPalooza #3 — Full Interview',         f:'long', p:'LinkedIn · YouTube'},
   {w:2, d:'2026-06-08',s:'hw', t:'Hot Wins #3 — Rapid Fire',                 f:'rf',   p:'LinkedIn · Instagram'},
   {w:2, d:'2026-06-09',s:'hw', t:'Hot Wins #3 — Full Interview',             f:'long', p:'LinkedIn · YouTube'},
@@ -305,8 +309,8 @@ let EV = [
   {w:2, d:'2026-06-10',s:'hw', t:'Hot Wins #4 — Rapid Fire',                 f:'rf',   p:'LinkedIn · Instagram'},
   {w:2, d:'2026-06-11',s:'hw', t:'Hot Wins #4 — Full Interview',             f:'long', p:'LinkedIn · YouTube'},
   {w:2, d:'2026-06-12',s:'gtm',t:'GTM Clawllective — Demo Hack #2',          f:'short',p:'LinkedIn'},
-  // Week 3 (Jun 14–19)
-  {w:3, d:'2026-06-14',s:'cp', t:'ChiliPalooza #5 — Rapid Fire',             f:'rf',   p:'LinkedIn · Instagram'},
+  {w:2, d:'2026-06-12',s:'cp', t:'ChiliPalooza #5 — Rapid Fire',             f:'rf',   p:'LinkedIn · Instagram'},
+  // ── Week 3 (Jun 15–19) ───────────────────────────────────────────────────
   {w:3, d:'2026-06-15',s:'cp', t:'ChiliPalooza #5 — Full Interview',         f:'long', p:'LinkedIn · YouTube'},
   {w:3, d:'2026-06-15',s:'hw', t:'Hot Wins #5 — Rapid Fire',                 f:'rf',   p:'LinkedIn · Instagram'},
   {w:3, d:'2026-06-16',s:'hw', t:'Hot Wins #5 — Full Interview',             f:'long', p:'LinkedIn · YouTube'},
@@ -315,8 +319,8 @@ let EV = [
   {w:3, d:'2026-06-17',s:'hw', t:'Hot Wins #6 — Rapid Fire',                 f:'rf',   p:'LinkedIn · Instagram'},
   {w:3, d:'2026-06-18',s:'hw', t:'Hot Wins #6 — Full Interview',             f:'long', p:'LinkedIn · YouTube'},
   {w:3, d:'2026-06-19',s:'gtm',t:'GTM Clawllective — Demo Hack #3',          f:'short',p:'LinkedIn'},
-  // Week 4 (Jun 21–26)
-  {w:4, d:'2026-06-21',s:'cp', t:'ChiliPalooza #7 — Rapid Fire',             f:'rf',   p:'LinkedIn · Instagram'},
+  {w:3, d:'2026-06-19',s:'cp', t:'ChiliPalooza #7 — Rapid Fire',             f:'rf',   p:'LinkedIn · Instagram'},
+  // ── Week 4 (Jun 22–26) ───────────────────────────────────────────────────
   {w:4, d:'2026-06-22',s:'cp', t:'ChiliPalooza #7 — Full Interview',         f:'long', p:'LinkedIn · YouTube'},
   {w:4, d:'2026-06-22',s:'hw', t:'Hot Wins #7 — Rapid Fire',                 f:'rf',   p:'LinkedIn · Instagram'},
   {w:4, d:'2026-06-23',s:'hw', t:'Hot Wins #7 — Full Interview',             f:'long', p:'LinkedIn · YouTube'},
@@ -325,8 +329,8 @@ let EV = [
   {w:4, d:'2026-06-24',s:'hw', t:'Hot Wins #8 — Rapid Fire',                 f:'rf',   p:'LinkedIn · Instagram'},
   {w:4, d:'2026-06-25',s:'hw', t:'Hot Wins #8 — Full Interview',             f:'long', p:'LinkedIn · YouTube'},
   {w:4, d:'2026-06-26',s:'gtm',t:'GTM Clawllective — Demo Hack #4',          f:'short',p:'LinkedIn'},
-  // Week 5 (Jun 28–Jul 3)
-  {w:5, d:'2026-06-28',s:'cp', t:'ChiliPalooza #9 — Rapid Fire',             f:'rf',   p:'LinkedIn · Instagram'},
+  {w:4, d:'2026-06-26',s:'cp', t:'ChiliPalooza #9 — Rapid Fire',             f:'rf',   p:'LinkedIn · Instagram'},
+  // ── Week 5 (Jun 29–Jul 3) ────────────────────────────────────────────────
   {w:5, d:'2026-06-29',s:'cp', t:'ChiliPalooza #9 — Full Interview',         f:'long', p:'LinkedIn · YouTube'},
   {w:5, d:'2026-06-29',s:'hw', t:'Hot Wins #9 — Rapid Fire',                 f:'rf',   p:'LinkedIn · Instagram'},
   {w:5, d:'2026-06-30',s:'hw', t:'Hot Wins #9 — Full Interview',             f:'long', p:'LinkedIn · YouTube'},
@@ -335,8 +339,8 @@ let EV = [
   {w:5, d:'2026-07-01',s:'hw', t:'Hot Wins #10 — Rapid Fire',                f:'rf',   p:'LinkedIn · Instagram'},
   {w:5, d:'2026-07-02',s:'hw', t:'Hot Wins #10 — Full Interview',            f:'long', p:'LinkedIn · YouTube'},
   {w:5, d:'2026-07-03',s:'gtm',t:'GTM Clawllective — Demo Hack #5',          f:'short',p:'LinkedIn'},
-  // Week 6 (Jul 5–10)
-  {w:6, d:'2026-07-05',s:'cp', t:'ChiliPalooza #11 — Rapid Fire',            f:'rf',   p:'LinkedIn · Instagram'},
+  {w:5, d:'2026-07-03',s:'cp', t:'ChiliPalooza #11 — Rapid Fire',            f:'rf',   p:'LinkedIn · Instagram'},
+  // ── Week 6 (Jul 6–10) ────────────────────────────────────────────────────
   {w:6, d:'2026-07-06',s:'cp', t:'ChiliPalooza #11 — Full Interview',        f:'long', p:'LinkedIn · YouTube'},
   {w:6, d:'2026-07-06',s:'hw', t:'Hot Wins #11 — Rapid Fire',                f:'rf',   p:'LinkedIn · Instagram'},
   {w:6, d:'2026-07-07',s:'hw', t:'Hot Wins #11 — Full Interview',            f:'long', p:'LinkedIn · YouTube'},
@@ -345,8 +349,8 @@ let EV = [
   {w:6, d:'2026-07-08',s:'hw', t:'Hot Wins #12 — Rapid Fire',                f:'rf',   p:'LinkedIn · Instagram'},
   {w:6, d:'2026-07-09',s:'hw', t:'Hot Wins #12 — Full Interview',            f:'long', p:'LinkedIn · YouTube'},
   {w:6, d:'2026-07-10',s:'gtm',t:'GTM Clawllective — Demo Hack #6',          f:'short',p:'LinkedIn'},
-  // Week 7 (Jul 12–17)
-  {w:7, d:'2026-07-12',s:'cp', t:'ChiliPalooza #13 — Rapid Fire',            f:'rf',   p:'LinkedIn · Instagram'},
+  {w:6, d:'2026-07-10',s:'cp', t:'ChiliPalooza #13 — Rapid Fire',            f:'rf',   p:'LinkedIn · Instagram'},
+  // ── Week 7 (Jul 13–17) ───────────────────────────────────────────────────
   {w:7, d:'2026-07-13',s:'cp', t:'ChiliPalooza #13 — Full Interview',        f:'long', p:'LinkedIn · YouTube'},
   {w:7, d:'2026-07-13',s:'hw', t:'Hot Wins #13 — Rapid Fire',                f:'rf',   p:'LinkedIn · Instagram'},
   {w:7, d:'2026-07-14',s:'hw', t:'Hot Wins #13 — Full Interview',            f:'long', p:'LinkedIn · YouTube'},
@@ -355,8 +359,8 @@ let EV = [
   {w:7, d:'2026-07-15',s:'hw', t:'Hot Wins #14 — Rapid Fire',                f:'rf',   p:'LinkedIn · Instagram'},
   {w:7, d:'2026-07-16',s:'hw', t:'Hot Wins #14 — Full Interview',            f:'long', p:'LinkedIn · YouTube'},
   {w:7, d:'2026-07-17',s:'gtm',t:'GTM Clawllective — Demo Hack #7',          f:'short',p:'LinkedIn'},
-  // Week 8 (Jul 19–24)
-  {w:8, d:'2026-07-19',s:'cp', t:'ChiliPalooza #15 — Rapid Fire',            f:'rf',   p:'LinkedIn · Instagram'},
+  {w:7, d:'2026-07-17',s:'cp', t:'ChiliPalooza #15 — Rapid Fire',            f:'rf',   p:'LinkedIn · Instagram'},
+  // ── Week 8 (Jul 20–24) ───────────────────────────────────────────────────
   {w:8, d:'2026-07-20',s:'cp', t:'ChiliPalooza #15 — Full Interview',        f:'long', p:'LinkedIn · YouTube'},
   {w:8, d:'2026-07-20',s:'hw', t:'Hot Wins #15 — Rapid Fire',                f:'rf',   p:'LinkedIn · Instagram'},
   {w:8, d:'2026-07-21',s:'hw', t:'Hot Wins #15 — Full Interview',            f:'long', p:'LinkedIn · YouTube'},
@@ -365,8 +369,8 @@ let EV = [
   {w:8, d:'2026-07-22',s:'hw', t:'Hot Wins #16 — Rapid Fire',                f:'rf',   p:'LinkedIn · Instagram'},
   {w:8, d:'2026-07-23',s:'hw', t:'Hot Wins #16 — Full Interview',            f:'long', p:'LinkedIn · YouTube'},
   {w:8, d:'2026-07-24',s:'gtm',t:'GTM Clawllective — Demo Hack #8',          f:'short',p:'LinkedIn'},
-  // Week 9 (Jul 26–31)
-  {w:9, d:'2026-07-26',s:'cp', t:'ChiliPalooza #17 — Rapid Fire',            f:'rf',   p:'LinkedIn · Instagram'},
+  {w:8, d:'2026-07-24',s:'cp', t:'ChiliPalooza #17 — Rapid Fire',            f:'rf',   p:'LinkedIn · Instagram'},
+  // ── Week 9 (Jul 27–31) ───────────────────────────────────────────────────
   {w:9, d:'2026-07-27',s:'cp', t:'ChiliPalooza #17 — Full Interview',        f:'long', p:'LinkedIn · YouTube'},
   {w:9, d:'2026-07-27',s:'hw', t:'Hot Wins #17 — Rapid Fire',                f:'rf',   p:'LinkedIn · Instagram'},
   {w:9, d:'2026-07-28',s:'hw', t:'Hot Wins #17 — Full Interview',            f:'long', p:'LinkedIn · YouTube'},
@@ -375,8 +379,8 @@ let EV = [
   {w:9, d:'2026-07-29',s:'hw', t:'Hot Wins #18 — Rapid Fire',                f:'rf',   p:'LinkedIn · Instagram'},
   {w:9, d:'2026-07-30',s:'hw', t:'Hot Wins #18 — Full Interview',            f:'long', p:'LinkedIn · YouTube'},
   {w:9, d:'2026-07-31',s:'gtm',t:'GTM Clawllective — Demo Hack #9',          f:'short',p:'LinkedIn'},
-  // Week 10 (Aug 2–7)
-  {w:10,d:'2026-08-02',s:'cp', t:'ChiliPalooza #19 — Rapid Fire',            f:'rf',   p:'LinkedIn · Instagram'},
+  {w:9, d:'2026-07-31',s:'cp', t:'ChiliPalooza #19 — Rapid Fire',            f:'rf',   p:'LinkedIn · Instagram'},
+  // ── Week 10 (Aug 3–7) ────────────────────────────────────────────────────
   {w:10,d:'2026-08-03',s:'cp', t:'ChiliPalooza #19 — Full Interview',        f:'long', p:'LinkedIn · YouTube'},
   {w:10,d:'2026-08-03',s:'hw', t:'Hot Wins #19 — Rapid Fire',                f:'rf',   p:'LinkedIn · Instagram'},
   {w:10,d:'2026-08-04',s:'hw', t:'Hot Wins #19 — Full Interview',            f:'long', p:'LinkedIn · YouTube'},
@@ -385,8 +389,8 @@ let EV = [
   {w:10,d:'2026-08-05',s:'hw', t:'Hot Wins #20 — Rapid Fire',                f:'rf',   p:'LinkedIn · Instagram'},
   {w:10,d:'2026-08-06',s:'hw', t:'Hot Wins #20 — Full Interview',            f:'long', p:'LinkedIn · YouTube'},
   {w:10,d:'2026-08-07',s:'gtm',t:'GTM Clawllective — Demo Hack #10',         f:'short',p:'LinkedIn'},
-  // Week 11 (Aug 9–14)
-  {w:11,d:'2026-08-09',s:'cp', t:'ChiliPalooza #21 — Rapid Fire',            f:'rf',   p:'LinkedIn · Instagram'},
+  {w:10,d:'2026-08-07',s:'cp', t:'ChiliPalooza #21 — Rapid Fire',            f:'rf',   p:'LinkedIn · Instagram'},
+  // ── Week 11 (Aug 10–14) ──────────────────────────────────────────────────
   {w:11,d:'2026-08-10',s:'cp', t:'ChiliPalooza #21 — Full Interview',        f:'long', p:'LinkedIn · YouTube'},
   {w:11,d:'2026-08-10',s:'hw', t:'Hot Wins #21 — Rapid Fire',                f:'rf',   p:'LinkedIn · Instagram'},
   {w:11,d:'2026-08-11',s:'hw', t:'Hot Wins #21 — Full Interview',            f:'long', p:'LinkedIn · YouTube'},
@@ -395,12 +399,36 @@ let EV = [
   {w:11,d:'2026-08-12',s:'hw', t:'Hot Wins #22 — Rapid Fire',                f:'rf',   p:'LinkedIn · Instagram'},
   {w:11,d:'2026-08-13',s:'hw', t:'Hot Wins #22 — Full Interview',            f:'long', p:'LinkedIn · YouTube'},
   {w:11,d:'2026-08-14',s:'gtm',t:'GTM Clawllective — Demo Hack #11',         f:'short',p:'LinkedIn'},
+  // ── GTM only — weeks 12–30 (every Friday through Dec 25) ─────────────────
+  {w:12,d:'2026-08-21',s:'gtm',t:'GTM Clawllective — Demo Hack #12',         f:'short',p:'LinkedIn'},
+  {w:13,d:'2026-08-28',s:'gtm',t:'GTM Clawllective — Demo Hack #13',         f:'short',p:'LinkedIn'},
+  {w:14,d:'2026-09-04',s:'gtm',t:'GTM Clawllective — Demo Hack #14',         f:'short',p:'LinkedIn'},
+  {w:15,d:'2026-09-11',s:'gtm',t:'GTM Clawllective — Demo Hack #15',         f:'short',p:'LinkedIn'},
+  {w:16,d:'2026-09-18',s:'gtm',t:'GTM Clawllective — Demo Hack #16',         f:'short',p:'LinkedIn'},
+  {w:17,d:'2026-09-25',s:'gtm',t:'GTM Clawllective — Demo Hack #17',         f:'short',p:'LinkedIn'},
+  {w:18,d:'2026-10-02',s:'gtm',t:'GTM Clawllective — Demo Hack #18',         f:'short',p:'LinkedIn'},
+  {w:19,d:'2026-10-09',s:'gtm',t:'GTM Clawllective — Demo Hack #19',         f:'short',p:'LinkedIn'},
+  {w:20,d:'2026-10-16',s:'gtm',t:'GTM Clawllective — Demo Hack #20',         f:'short',p:'LinkedIn'},
+  {w:21,d:'2026-10-23',s:'gtm',t:'GTM Clawllective — Demo Hack #21',         f:'short',p:'LinkedIn'},
+  {w:22,d:'2026-10-30',s:'gtm',t:'GTM Clawllective — Demo Hack #22',         f:'short',p:'LinkedIn'},
+  {w:23,d:'2026-11-06',s:'gtm',t:'GTM Clawllective — Demo Hack #23',         f:'short',p:'LinkedIn'},
+  {w:24,d:'2026-11-13',s:'gtm',t:'GTM Clawllective — Demo Hack #24',         f:'short',p:'LinkedIn'},
+  {w:25,d:'2026-11-20',s:'gtm',t:'GTM Clawllective — Demo Hack #25',         f:'short',p:'LinkedIn'},
+  {w:26,d:'2026-11-27',s:'gtm',t:'GTM Clawllective — Demo Hack #26',         f:'short',p:'LinkedIn'},
+  {w:27,d:'2026-12-04',s:'gtm',t:'GTM Clawllective — Demo Hack #27',         f:'short',p:'LinkedIn'},
+  {w:28,d:'2026-12-11',s:'gtm',t:'GTM Clawllective — Demo Hack #28',         f:'short',p:'LinkedIn'},
+  {w:29,d:'2026-12-18',s:'gtm',t:'GTM Clawllective — Demo Hack #29',         f:'short',p:'LinkedIn'},
+  {w:30,d:'2026-12-25',s:'gtm',t:'GTM Clawllective — Demo Hack #30',         f:'short',p:'LinkedIn'},
 ];
 
 const MONTHS = [
-  {id:'june',   name:'June',   year:2026, m:5},
-  {id:'july',   name:'July',   year:2026, m:6},
-  {id:'august', name:'August', year:2026, m:7},
+  {id:'june',      name:'June',      year:2026, m:5},
+  {id:'july',      name:'July',      year:2026, m:6},
+  {id:'august',    name:'August',    year:2026, m:7},
+  {id:'september', name:'September', year:2026, m:8},
+  {id:'october',   name:'October',   year:2026, m:9},
+  {id:'november',  name:'November',  year:2026, m:10},
+  {id:'december',  name:'December',  year:2026, m:11},
 ];
 
 // Index events by date (rebuilt after each data load)

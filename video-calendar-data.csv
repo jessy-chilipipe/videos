@@ -1,11 +1,15 @@
 week,date,series,title,format,platforms,status
+1,2026-06-01,GTM Clawllective,GTM Clawllective - ITW #1,short,LinkedIn,not started
+1,2026-06-02,ChiliPalooza,ChiliPalooza #1 - Rapid Fire,short,LinkedIn · Instagram,not started
 1,2026-06-03,GTM Clawllective,GTM Clawllective - Demo Hack #1,short,website,not started
 1,2026-06-04,ChiliPalooza,ChiliPalooza #1 - Full Interview,long,LinkedIn · YouTube,not started
 1,2026-06-04,Hot Wins,Hot Wins #1 - Rapid Fire,short,LinkedIn · Instagram,not started
 1,2026-06-05,Hot Wins,Hot Wins #1 - Full Interview,long,LinkedIn · YouTube,not started
 1,2026-06-05,ChiliPalooza,ChiliPalooza #2 - Rapid Fire,short,LinkedIn · Instagram,not started
+1,2026-06-05,GTM Clawllective,GTM Clawllective - ITW #2,short,LinkedIn,not started
 2,2026-06-08,ChiliPalooza,ChiliPalooza #2 - Full Interview,long,LinkedIn · YouTube,not started
 2,2026-06-08,Hot Wins,Hot Wins #2 - Rapid Fire,short,LinkedIn · Instagram,not started
+2,2026-06-08,GTM Clawllective,GTM Clawllective - ITW #3,short,LinkedIn,not started
 2,2026-06-09,Hot Wins,Hot Wins #2 - Full Interview,long,LinkedIn · YouTube,not started
 2,2026-06-09,ChiliPalooza,ChiliPalooza #3 - Rapid Fire,short,LinkedIn · Instagram,not started
 2,2026-06-10,GTM Clawllective,GTM Clawllective - Demo Hack #2,short,website,not started
@@ -13,8 +17,10 @@ week,date,series,title,format,platforms,status
 2,2026-06-11,Hot Wins,Hot Wins #3 - Rapid Fire,short,LinkedIn · Instagram,not started
 2,2026-06-12,Hot Wins,Hot Wins #3 - Full Interview,long,LinkedIn · YouTube,not started
 2,2026-06-12,ChiliPalooza,ChiliPalooza #4 - Rapid Fire,short,LinkedIn · Instagram,not started
+2,2026-06-12,GTM Clawllective,GTM Clawllective - ITW #4,short,LinkedIn,not started
 3,2026-06-15,ChiliPalooza,ChiliPalooza #4 - Full Interview,long,LinkedIn · YouTube,not started
 3,2026-06-15,Hot Wins,Hot Wins #4 - Rapid Fire,short,LinkedIn · Instagram,not started
+3,2026-06-15,GTM Clawllective,GTM Clawllective - ITW #5,short,LinkedIn,not started
 3,2026-06-16,Hot Wins,Hot Wins #4 - Full Interview,long,LinkedIn · YouTube,not started
 3,2026-06-16,ChiliPalooza,ChiliPalooza #5 - Rapid Fire,short,LinkedIn · Instagram,not started
 3,2026-06-17,GTM Clawllective,GTM Clawllective - Demo Hack #3,short,website,not started
@@ -22,159 +28,102 @@ week,date,series,title,format,platforms,status
 3,2026-06-18,Hot Wins,Hot Wins #5 - Rapid Fire,short,LinkedIn · Instagram,not started
 3,2026-06-19,Hot Wins,Hot Wins #5 - Full Interview,long,LinkedIn · YouTube,not started
 3,2026-06-19,ChiliPalooza,ChiliPalooza #6 - Rapid Fire,short,LinkedIn · Instagram,not started
+3,2026-06-19,GTM Clawllective,GTM Clawllective - ITW #6,short,LinkedIn,not started
 4,2026-06-22,ChiliPalooza,ChiliPalooza #6 - Full Interview,long,LinkedIn · YouTube,not started
 4,2026-06-22,Hot Wins,Hot Wins #6 - Rapid Fire,short,LinkedIn · Instagram,not started
+4,2026-06-22,GTM Clawllective,GTM Clawllective - ITW #7,short,LinkedIn,not started
 4,2026-06-23,Hot Wins,Hot Wins #6 - Full Interview,long,LinkedIn · YouTube,not started
 4,2026-06-23,ChiliPalooza,ChiliPalooza #7 - Rapid Fire,short,LinkedIn · Instagram,not started
 4,2026-06-24,GTM Clawllective,GTM Clawllective - Demo Hack #4,short,website,not started
 4,2026-06-25,ChiliPalooza,ChiliPalooza #7 - Full Interview,long,LinkedIn · YouTube,not started
 4,2026-06-25,Hot Wins,Hot Wins #7 - Rapid Fire,short,LinkedIn · Instagram,not started
 4,2026-06-26,Hot Wins,Hot Wins #7 - Full Interview,long,LinkedIn · YouTube,not started
-4,2026-06-26,ChiliPalooza,ChiliPalooza #8 - Rapid Fire,short,LinkedIn · Instagram,not started
-5,2026-06-29,ChiliPalooza,ChiliPalooza #8 - Full Interview,long,LinkedIn · YouTube,not started
+4,2026-06-26,GTM Clawllective,GTM Clawllective - ITW #8,short,LinkedIn,not started
 5,2026-06-29,Hot Wins,Hot Wins #8 - Rapid Fire,short,LinkedIn · Instagram,not started
+5,2026-06-29,GTM Clawllective,GTM Clawllective - ITW #9,short,LinkedIn,not started
 5,2026-06-30,Hot Wins,Hot Wins #8 - Full Interview,long,LinkedIn · YouTube,not started
-5,2026-06-30,ChiliPalooza,ChiliPalooza #9 - Rapid Fire,short,LinkedIn · Instagram,not started
 5,2026-07-01,GTM Clawllective,GTM Clawllective - Demo Hack #5,short,website,not started
-5,2026-07-02,ChiliPalooza,ChiliPalooza #9 - Full Interview,long,LinkedIn · YouTube,not started
 5,2026-07-02,Hot Wins,Hot Wins #9 - Rapid Fire,short,LinkedIn · Instagram,not started
 5,2026-07-03,Hot Wins,Hot Wins #9 - Full Interview,long,LinkedIn · YouTube,not started
-5,2026-07-03,ChiliPalooza,ChiliPalooza #10 - Rapid Fire,short,LinkedIn · Instagram,not started
-6,2026-07-06,ChiliPalooza,ChiliPalooza #10 - Full Interview,long,LinkedIn · YouTube,not started
+5,2026-07-03,GTM Clawllective,GTM Clawllective - ITW #10,short,LinkedIn,not started
 6,2026-07-06,Hot Wins,Hot Wins #10 - Rapid Fire,short,LinkedIn · Instagram,not started
+6,2026-07-06,GTM Clawllective,GTM Clawllective - ITW #11,short,LinkedIn,not started
 6,2026-07-07,Hot Wins,Hot Wins #10 - Full Interview,long,LinkedIn · YouTube,not started
-6,2026-07-07,ChiliPalooza,ChiliPalooza #11 - Rapid Fire,short,LinkedIn · Instagram,not started
 6,2026-07-08,GTM Clawllective,GTM Clawllective - Demo Hack #6,short,website,not started
-6,2026-07-09,ChiliPalooza,ChiliPalooza #11 - Full Interview,long,LinkedIn · YouTube,not started
 6,2026-07-09,Hot Wins,Hot Wins #11 - Rapid Fire,short,LinkedIn · Instagram,not started
 6,2026-07-10,Hot Wins,Hot Wins #11 - Full Interview,long,LinkedIn · YouTube,not started
-6,2026-07-10,ChiliPalooza,ChiliPalooza #12 - Rapid Fire,short,LinkedIn · Instagram,not started
-7,2026-07-13,ChiliPalooza,ChiliPalooza #12 - Full Interview,long,LinkedIn · YouTube,not started
-7,2026-07-13,Hot Wins,Hot Wins #12 - Rapid Fire,short,LinkedIn · Instagram,not started
-7,2026-07-14,Hot Wins,Hot Wins #12 - Full Interview,long,LinkedIn · YouTube,not started
-7,2026-07-14,ChiliPalooza,ChiliPalooza #13 - Rapid Fire,short,LinkedIn · Instagram,not started
-7,2026-07-15,GTM Clawllective,GTM Clawllective - Demo Hack #7,short,website,not started
-7,2026-07-16,ChiliPalooza,ChiliPalooza #13 - Full Interview,long,LinkedIn · YouTube,not started
-7,2026-07-16,Hot Wins,Hot Wins #13 - Rapid Fire,short,LinkedIn · Instagram,not started
-7,2026-07-17,Hot Wins,Hot Wins #13 - Full Interview,long,LinkedIn · YouTube,not started
-7,2026-07-17,ChiliPalooza,ChiliPalooza #14 - Rapid Fire,short,LinkedIn · Instagram,not started
-8,2026-07-20,ChiliPalooza,ChiliPalooza #14 - Full Interview,long,LinkedIn · YouTube,not started
-8,2026-07-20,Hot Wins,Hot Wins #14 - Rapid Fire,short,LinkedIn · Instagram,not started
-8,2026-07-21,Hot Wins,Hot Wins #14 - Full Interview,long,LinkedIn · YouTube,not started
-8,2026-07-21,ChiliPalooza,ChiliPalooza #15 - Rapid Fire,short,LinkedIn · Instagram,not started
-8,2026-07-22,GTM Clawllective,GTM Clawllective - Demo Hack #8,short,website,not started
-8,2026-07-23,ChiliPalooza,ChiliPalooza #15 - Full Interview,long,LinkedIn · YouTube,not started
-8,2026-07-23,Hot Wins,Hot Wins #15 - Rapid Fire,short,LinkedIn · Instagram,not started
-8,2026-07-24,Hot Wins,Hot Wins #15 - Full Interview,long,LinkedIn · YouTube,not started
-8,2026-07-24,ChiliPalooza,ChiliPalooza #16 - Rapid Fire,short,LinkedIn · Instagram,not started
-9,2026-07-27,ChiliPalooza,ChiliPalooza #16 - Full Interview,long,LinkedIn · YouTube,not started
-9,2026-07-27,Hot Wins,Hot Wins #16 - Rapid Fire,short,LinkedIn · Instagram,not started
-9,2026-07-28,Hot Wins,Hot Wins #16 - Full Interview,long,LinkedIn · YouTube,not started
-9,2026-07-28,ChiliPalooza,ChiliPalooza #17 - Rapid Fire,short,LinkedIn · Instagram,not started
-9,2026-07-29,GTM Clawllective,GTM Clawllective - Demo Hack #9,short,website,not started
-9,2026-07-30,ChiliPalooza,ChiliPalooza #17 - Full Interview,long,LinkedIn · YouTube,not started
-9,2026-07-30,Hot Wins,Hot Wins #17 - Rapid Fire,short,LinkedIn · Instagram,not started
-9,2026-07-31,Hot Wins,Hot Wins #17 - Full Interview,long,LinkedIn · YouTube,not started
-9,2026-07-31,ChiliPalooza,ChiliPalooza #18 - Rapid Fire,short,LinkedIn · Instagram,not started
-10,2026-08-03,ChiliPalooza,ChiliPalooza #18 - Full Interview,long,LinkedIn · YouTube,not started
-10,2026-08-03,Hot Wins,Hot Wins #18 - Rapid Fire,short,LinkedIn · Instagram,not started
-10,2026-08-04,Hot Wins,Hot Wins #18 - Full Interview,long,LinkedIn · YouTube,not started
-10,2026-08-04,ChiliPalooza,ChiliPalooza #19 - Rapid Fire,short,LinkedIn · Instagram,not started
-10,2026-08-05,GTM Clawllective,GTM Clawllective - Demo Hack #10,short,website,not started
-10,2026-08-06,ChiliPalooza,ChiliPalooza #19 - Full Interview,long,LinkedIn · YouTube,not started
-10,2026-08-06,Hot Wins,Hot Wins #19 - Rapid Fire,short,LinkedIn · Instagram,not started
-10,2026-08-07,Hot Wins,Hot Wins #19 - Full Interview,long,LinkedIn · YouTube,not started
-10,2026-08-07,ChiliPalooza,ChiliPalooza #20 - Rapid Fire,short,LinkedIn · Instagram,not started
-11,2026-08-10,ChiliPalooza,ChiliPalooza #20 - Full Interview,long,LinkedIn · YouTube,not started
-11,2026-08-10,Hot Wins,Hot Wins #20 - Rapid Fire,short,LinkedIn · Instagram,not started
-11,2026-08-11,Hot Wins,Hot Wins #20 - Full Interview,long,LinkedIn · YouTube,not started
-11,2026-08-11,ChiliPalooza,ChiliPalooza #21 - Rapid Fire,short,LinkedIn · Instagram,not started
-11,2026-08-12,GTM Clawllective,GTM Clawllective - Demo Hack #11,short,website,not started
-11,2026-08-13,ChiliPalooza,ChiliPalooza #21 - Full Interview,long,LinkedIn · YouTube,not started
-11,2026-08-13,Hot Wins,Hot Wins #21 - Rapid Fire,short,LinkedIn · Instagram,not started
-11,2026-08-14,Hot Wins,Hot Wins #21 - Full Interview,long,LinkedIn · YouTube,not started
-11,2026-08-14,ChiliPalooza,ChiliPalooza #22 - Rapid Fire,short,LinkedIn · Instagram,not started
-12,2026-08-17,ChiliPalooza,ChiliPalooza #22 - Full Interview,long,LinkedIn · YouTube,not started
-12,2026-08-17,Hot Wins,Hot Wins #22 - Rapid Fire,short,LinkedIn · Instagram,not started
-12,2026-08-18,Hot Wins,Hot Wins #22 - Full Interview,long,LinkedIn · YouTube,not started
-12,2026-08-19,GTM Clawllective,GTM Clawllective - Demo Hack #12,short,website,not started
-13,2026-08-26,GTM Clawllective,GTM Clawllective - Demo Hack #13,short,website,not started
-14,2026-09-02,GTM Clawllective,GTM Clawllective - Demo Hack #14,short,website,not started
-15,2026-09-09,GTM Clawllective,GTM Clawllective - Demo Hack #15,short,website,not started
-16,2026-09-16,GTM Clawllective,GTM Clawllective - Demo Hack #16,short,website,not started
-17,2026-09-23,GTM Clawllective,GTM Clawllective - Demo Hack #17,short,website,not started
-18,2026-09-30,GTM Clawllective,GTM Clawllective - Demo Hack #18,short,website,not started
-19,2026-10-07,GTM Clawllective,GTM Clawllective - Demo Hack #19,short,website,not started
-20,2026-10-14,GTM Clawllective,GTM Clawllective - Demo Hack #20,short,website,not started
-21,2026-10-21,GTM Clawllective,GTM Clawllective - Demo Hack #21,short,website,not started
-22,2026-10-28,GTM Clawllective,GTM Clawllective - Demo Hack #22,short,website,not started
-23,2026-11-04,GTM Clawllective,GTM Clawllective - Demo Hack #23,short,website,not started
-24,2026-11-11,GTM Clawllective,GTM Clawllective - Demo Hack #24,short,website,not started
-25,2026-11-18,GTM Clawllective,GTM Clawllective - Demo Hack #25,short,website,not started
-26,2026-11-25,GTM Clawllective,GTM Clawllective - Demo Hack #26,short,website,not started
-27,2026-12-02,GTM Clawllective,GTM Clawllective - Demo Hack #27,short,website,not started
-28,2026-12-09,GTM Clawllective,GTM Clawllective - Demo Hack #28,short,website,not started
-29,2026-12-16,GTM Clawllective,GTM Clawllective - Demo Hack #29,short,website,not started
-30,2026-12-23,GTM Clawllective,GTM Clawllective - Demo Hack #30,short,website,not started
-31,2026-12-30,GTM Clawllective,GTM Clawllective - Demo Hack #31,short,website,not started
-1,2026-06-01,GTM Clawllective,GTM Clawllective - ITW #1,short,LinkedIn,not started
-1,2026-06-05,GTM Clawllective,GTM Clawllective - ITW #2,short,LinkedIn,not started
-2,2026-06-08,GTM Clawllective,GTM Clawllective - ITW #3,short,LinkedIn,not started
-2,2026-06-12,GTM Clawllective,GTM Clawllective - ITW #4,short,LinkedIn,not started
-3,2026-06-15,GTM Clawllective,GTM Clawllective - ITW #5,short,LinkedIn,not started
-3,2026-06-19,GTM Clawllective,GTM Clawllective - ITW #6,short,LinkedIn,not started
-4,2026-06-22,GTM Clawllective,GTM Clawllective - ITW #7,short,LinkedIn,not started
-4,2026-06-26,GTM Clawllective,GTM Clawllective - ITW #8,short,LinkedIn,not started
-5,2026-06-29,GTM Clawllective,GTM Clawllective - ITW #9,short,LinkedIn,not started
-5,2026-07-03,GTM Clawllective,GTM Clawllective - ITW #10,short,LinkedIn,not started
-6,2026-07-06,GTM Clawllective,GTM Clawllective - ITW #11,short,LinkedIn,not started
 6,2026-07-10,GTM Clawllective,GTM Clawllective - ITW #12,short,LinkedIn,not started
 7,2026-07-13,GTM Clawllective,GTM Clawllective - ITW #13,short,LinkedIn,not started
+7,2026-07-15,GTM Clawllective,GTM Clawllective - Demo Hack #7,short,website,not started
 7,2026-07-17,GTM Clawllective,GTM Clawllective - ITW #14,short,LinkedIn,not started
 8,2026-07-20,GTM Clawllective,GTM Clawllective - ITW #15,short,LinkedIn,not started
+8,2026-07-22,GTM Clawllective,GTM Clawllective - Demo Hack #8,short,website,not started
 8,2026-07-24,GTM Clawllective,GTM Clawllective - ITW #16,short,LinkedIn,not started
 9,2026-07-27,GTM Clawllective,GTM Clawllective - ITW #17,short,LinkedIn,not started
+9,2026-07-29,GTM Clawllective,GTM Clawllective - Demo Hack #9,short,website,not started
 9,2026-07-31,GTM Clawllective,GTM Clawllective - ITW #18,short,LinkedIn,not started
 10,2026-08-03,GTM Clawllective,GTM Clawllective - ITW #19,short,LinkedIn,not started
+10,2026-08-05,GTM Clawllective,GTM Clawllective - Demo Hack #10,short,website,not started
 10,2026-08-07,GTM Clawllective,GTM Clawllective - ITW #20,short,LinkedIn,not started
 11,2026-08-10,GTM Clawllective,GTM Clawllective - ITW #21,short,LinkedIn,not started
+11,2026-08-12,GTM Clawllective,GTM Clawllective - Demo Hack #11,short,website,not started
 11,2026-08-14,GTM Clawllective,GTM Clawllective - ITW #22,short,LinkedIn,not started
 12,2026-08-17,GTM Clawllective,GTM Clawllective - ITW #23,short,LinkedIn,not started
+12,2026-08-19,GTM Clawllective,GTM Clawllective - Demo Hack #12,short,website,not started
 12,2026-08-21,GTM Clawllective,GTM Clawllective - ITW #24,short,LinkedIn,not started
 13,2026-08-24,GTM Clawllective,GTM Clawllective - ITW #25,short,LinkedIn,not started
+13,2026-08-26,GTM Clawllective,GTM Clawllective - Demo Hack #13,short,website,not started
 13,2026-08-28,GTM Clawllective,GTM Clawllective - ITW #26,short,LinkedIn,not started
 14,2026-08-31,GTM Clawllective,GTM Clawllective - ITW #27,short,LinkedIn,not started
+14,2026-09-02,GTM Clawllective,GTM Clawllective - Demo Hack #14,short,website,not started
 14,2026-09-04,GTM Clawllective,GTM Clawllective - ITW #28,short,LinkedIn,not started
 15,2026-09-07,GTM Clawllective,GTM Clawllective - ITW #29,short,LinkedIn,not started
+15,2026-09-09,GTM Clawllective,GTM Clawllective - Demo Hack #15,short,website,not started
 15,2026-09-11,GTM Clawllective,GTM Clawllective - ITW #30,short,LinkedIn,not started
 16,2026-09-14,GTM Clawllective,GTM Clawllective - ITW #31,short,LinkedIn,not started
+16,2026-09-16,GTM Clawllective,GTM Clawllective - Demo Hack #16,short,website,not started
 16,2026-09-18,GTM Clawllective,GTM Clawllective - ITW #32,short,LinkedIn,not started
 17,2026-09-21,GTM Clawllective,GTM Clawllective - ITW #33,short,LinkedIn,not started
+17,2026-09-23,GTM Clawllective,GTM Clawllective - Demo Hack #17,short,website,not started
 17,2026-09-25,GTM Clawllective,GTM Clawllective - ITW #34,short,LinkedIn,not started
 18,2026-09-28,GTM Clawllective,GTM Clawllective - ITW #35,short,LinkedIn,not started
+18,2026-09-30,GTM Clawllective,GTM Clawllective - Demo Hack #18,short,website,not started
 18,2026-10-02,GTM Clawllective,GTM Clawllective - ITW #36,short,LinkedIn,not started
 19,2026-10-05,GTM Clawllective,GTM Clawllective - ITW #37,short,LinkedIn,not started
+19,2026-10-07,GTM Clawllective,GTM Clawllective - Demo Hack #19,short,website,not started
 19,2026-10-09,GTM Clawllective,GTM Clawllective - ITW #38,short,LinkedIn,not started
 20,2026-10-12,GTM Clawllective,GTM Clawllective - ITW #39,short,LinkedIn,not started
+20,2026-10-14,GTM Clawllective,GTM Clawllective - Demo Hack #20,short,website,not started
 20,2026-10-16,GTM Clawllective,GTM Clawllective - ITW #40,short,LinkedIn,not started
 21,2026-10-19,GTM Clawllective,GTM Clawllective - ITW #41,short,LinkedIn,not started
+21,2026-10-21,GTM Clawllective,GTM Clawllective - Demo Hack #21,short,website,not started
 21,2026-10-23,GTM Clawllective,GTM Clawllective - ITW #42,short,LinkedIn,not started
 22,2026-10-26,GTM Clawllective,GTM Clawllective - ITW #43,short,LinkedIn,not started
+22,2026-10-28,GTM Clawllective,GTM Clawllective - Demo Hack #22,short,website,not started
 22,2026-10-30,GTM Clawllective,GTM Clawllective - ITW #44,short,LinkedIn,not started
 23,2026-11-02,GTM Clawllective,GTM Clawllective - ITW #45,short,LinkedIn,not started
+23,2026-11-04,GTM Clawllective,GTM Clawllective - Demo Hack #23,short,website,not started
 23,2026-11-06,GTM Clawllective,GTM Clawllective - ITW #46,short,LinkedIn,not started
 24,2026-11-09,GTM Clawllective,GTM Clawllective - ITW #47,short,LinkedIn,not started
+24,2026-11-11,GTM Clawllective,GTM Clawllective - Demo Hack #24,short,website,not started
 24,2026-11-13,GTM Clawllective,GTM Clawllective - ITW #48,short,LinkedIn,not started
 25,2026-11-16,GTM Clawllective,GTM Clawllective - ITW #49,short,LinkedIn,not started
+25,2026-11-18,GTM Clawllective,GTM Clawllective - Demo Hack #25,short,website,not started
 25,2026-11-20,GTM Clawllective,GTM Clawllective - ITW #50,short,LinkedIn,not started
 26,2026-11-23,GTM Clawllective,GTM Clawllective - ITW #51,short,LinkedIn,not started
+26,2026-11-25,GTM Clawllective,GTM Clawllective - Demo Hack #26,short,website,not started
 26,2026-11-27,GTM Clawllective,GTM Clawllective - ITW #52,short,LinkedIn,not started
 27,2026-11-30,GTM Clawllective,GTM Clawllective - ITW #53,short,LinkedIn,not started
+27,2026-12-02,GTM Clawllective,GTM Clawllective - Demo Hack #27,short,website,not started
 27,2026-12-04,GTM Clawllective,GTM Clawllective - ITW #54,short,LinkedIn,not started
 28,2026-12-07,GTM Clawllective,GTM Clawllective - ITW #55,short,LinkedIn,not started
+28,2026-12-09,GTM Clawllective,GTM Clawllective - Demo Hack #28,short,website,not started
 28,2026-12-11,GTM Clawllective,GTM Clawllective - ITW #56,short,LinkedIn,not started
 29,2026-12-14,GTM Clawllective,GTM Clawllective - ITW #57,short,LinkedIn,not started
+29,2026-12-16,GTM Clawllective,GTM Clawllective - Demo Hack #29,short,website,not started
 29,2026-12-18,GTM Clawllective,GTM Clawllective - ITW #58,short,LinkedIn,not started
 30,2026-12-21,GTM Clawllective,GTM Clawllective - ITW #59,short,LinkedIn,not started
+30,2026-12-23,GTM Clawllective,GTM Clawllective - Demo Hack #30,short,website,not started
 30,2026-12-25,GTM Clawllective,GTM Clawllective - ITW #60,short,LinkedIn,not started
 31,2026-12-28,GTM Clawllective,GTM Clawllective - ITW #61,short,LinkedIn,not started
+31,2026-12-30,GTM Clawllective,GTM Clawllective - Demo Hack #31,short,website,not started

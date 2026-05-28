@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Video Content Calendar 2026 — Chili Piper</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,800&family=Inter:wght@400;500;600;700&family=Source+Code+Pro:wght@500;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --chili:#FF5721;--black:#131624;--dgray:#474F70;--mgray:#9C9DB4;
+  --lgray:#DFE2EB;--cream:#FCFAF8;--creamd:#F4F4F0;
+  --purple:#543DFF;--blue:#3529BF;--green:#008563;--white:#FFFFFF;
+  --tint-hw:#FFF0EB;--tint-cp:#EDEAFF;--tint-gtm:#E8EEFF;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--black);font-size:15px;line-height:1.5}
+.page{max-width:1100px;margin:0 auto;padding:48px 40px 80px}
+
+/* Header */
+.header{margin-bottom:40px;border-bottom:3px solid var(--chili);padding-bottom:32px}
+.eyebrow{font-family:'Source Code Pro',monospace;font-size:12px;font-weight:700;color:var(--chili);text-transform:uppercase;letter-spacing:.08em;margin-bottom:12px;display:block}
+.eyebrow::before{content:"// ";letter-spacing:-.1em}
+.title{font-family:'Fraunces',serif;font-size:clamp(26px,4vw,42px);font-weight:800;line-height:1.05;color:var(--black);margin-bottom:8px}
+.title span{color:var(--chili)}
+.subtitle{font-size:14px;color:var(--mgray);font-style:italic;margin-bottom:20px}
+.legend{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:34px;font-size:12px;font-weight:600;border:1.5px solid transparent}
+.chip .dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.chip-hw {background:var(--tint-hw); color:var(--chili); border-color:#FFD0BE}.chip-hw  .dot{background:var(--chili)}
+.chip-cp {background:var(--tint-cp); color:var(--purple);border-color:#C9C2FF}.chip-cp  .dot{background:var(--purple)}
+.chip-gtm{background:var(--tint-gtm);color:var(--blue);  border-color:#BDC8FF}.chip-gtm .dot{background:var(--blue)}
+.chip-long {background:#EEF3FF;color:var(--blue); border-color:#BDC8FF}.chip-long  .dot{background:var(--blue)}
+.chip-short{background:#EEFFF8;color:var(--green);border-color:#9FE2CA}.chip-short .dot{background:var(--green)}
+
+/* Info cards */
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:36px}
+@media(max-width:640px){.info-grid{grid-template-columns:1fr}}
+.info-card{background:var(--white);border:1px solid var(--lgray);border-radius:16px;padding:20px 24px}
+.card-label{font-family:'Source Code Pro',monospace;font-size:11px;font-weight:700;color:var(--chili);text-transform:uppercase;letter-spacing:.06em;margin-bottom:12px;display:block}
+.card-label::before{content:"// ";letter-spacing:-.1em}
+.info-card ul{list-style:none;display:flex;flex-direction:column;gap:6px}
+.info-card li{font-size:13px;color:var(--dgray);padding-left:16px;position:relative;line-height:1.5}
+.info-card li::before{content:"·";position:absolute;left:0;color:var(--chili);font-weight:700}
+.info-card li strong{color:var(--black)}
+
+/* Controls */
+.controls{display:flex;align-items:center;gap:14px;margin-bottom:32px;flex-wrap:wrap}
+.view-toggle{display:flex;background:var(--white);border:1.5px solid var(--lgray);border-radius:34px;padding:3px;gap:2px;flex-shrink:0}
+.view-btn{padding:7px 20px;border-radius:34px;border:none;background:transparent;color:var(--dgray);font-size:13px;font-weight:600;font-family:'Inter',sans-serif;cursor:pointer;transition:all .15s ease}
+.view-btn.active{background:var(--black);color:var(--white)}
+.month-nav{display:flex;gap:6px;flex-wrap:wrap}
+.month-btn{padding:7px 16px;border-radius:34px;border:1.5px solid var(--lgray);background:var(--white);color:var(--dgray);font-size:13px;font-weight:600;font-family:'Inter',sans-serif;cursor:pointer;transition:all .15s ease;text-decoration:none;display:inline-block}
+.month-btn:hover,.month-btn.active{background:var(--chili);border-color:var(--chili);color:var(--white)}
+
+/* ── LIST VIEW ── */
+.month-section{margin-bottom:52px}
+.month-heading{font-family:'Fraunces',serif;font-size:22px;font-weight:800;color:var(--black);margin-bottom:20px;display:flex;align-items:center;gap:12px}
+.month-heading::after{content:"";flex:1;height:1px;background:var(--lgray)}
+.week-block{margin-bottom:22px}
+.week-header{display:flex;align-items:baseline;gap:10px;margin-bottom:8px}
+.week-label{font-size:13px;font-weight:700;color:var(--chili);text-transform:uppercase;letter-spacing:.06em}
+.week-dates{font-size:12px;color:var(--mgray)}
+.week-count{font-size:11px;color:var(--mgray);background:var(--creamd);padding:2px 8px;border-radius:34px;margin-left:auto}
+.list-table{width:100%;border-collapse:separate;border-spacing:0;border-radius:12px;overflow:hidden;border:1px solid var(--lgray);font-size:13px}
+.list-table thead tr{background:var(--black)}
+.list-table thead th{color:var(--white);font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.06em;padding:10px 14px;text-align:left;border-right:1px solid #2a2f47}
+.list-table thead th:last-child{border-right:none}
+.list-table thead th.c{text-align:center}
+.list-table tbody tr{border-bottom:1px solid var(--lgray);transition:filter .1s}
+.list-table tbody tr:last-child{border-bottom:none}
+.list-table tbody tr:hover{filter:brightness(.97)}
+.list-table td{padding:10px 14px;vertical-align:middle;border-right:1px solid var(--lgray)}
+.list-table td:last-child{border-right:none}
+tr.hw  td{background:var(--tint-hw)}
+tr.cp  td{background:var(--tint-cp)}
+tr.gtm td{background:var(--tint-gtm)}
+.sbadge{display:inline-block;font-weight:700;font-size:12px;padding:3px 10px;border-radius:34px;white-space:nowrap}
+tr.hw  .sbadge{color:var(--chili); background:#FFE0D4}
+tr.cp  .sbadge{color:var(--purple);background:#DDD8FF}
+tr.gtm .sbadge{color:var(--blue);  background:#D0D8FF}
+.fmt{display:inline-block;font-weight:700;font-size:11px;padding:3px 10px;border-radius:34px;white-space:nowrap}
+.fmt-long {color:var(--blue); background:#D8E2FF}
+.fmt-short{color:var(--green);background:#CFFAE8}
+.td-day{color:var(--dgray);white-space:nowrap;font-size:12px}
+.td-content{color:var(--black);font-weight:500}
+.td-plat{color:var(--dgray);font-size:12px}
+.transition-note{background:var(--creamd);border:1px dashed var(--lgray);border-radius:8px;padding:10px 18px;margin:6px 0 22px;font-size:12px;color:var(--mgray);font-style:italic;text-align:center}
+.transition-note strong{color:var(--dgray);font-style:normal}
+
+/* ── CALENDAR VIEW ── */
+.cal-month{margin-bottom:52px}
+.cal-month-title{font-family:'Fraunces',serif;font-size:22px;font-weight:800;color:var(--black);margin-bottom:12px;display:flex;align-items:center;gap:12px}
+.cal-month-title::after{content:"";flex:1;height:1px;background:var(--lgray)}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);border:1px solid var(--lgray);border-radius:12px;overflow:hidden}
+.cal-dow{background:var(--black);color:var(--white);text-align:center;padding:10px 4px;font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;border-right:1px solid #2a2f47}
+.cal-dow:last-child{border-right:none}
+.cal-cell{min-height:108px;background:var(--white);border-right:1px solid var(--lgray);border-top:1px solid var(--lgray);padding:8px 6px;position:relative}
+.cal-cell:nth-child(7n+1){border-right:1px solid var(--lgray)} /* keep consistent */
+.cal-cell:nth-child(7n){border-right:none}
+.cal-cell.empty{background:var(--cream)}
+.cal-cell.wknd{background:var(--creamd)}
+.cal-cell.wknd.empty{background:#EEECEA}
+.cal-num{font-size:12px;font-weight:700;color:var(--dgray);margin-bottom:5px;line-height:1}
+.cal-ev{display:block;font-size:10px;font-weight:600;padding:2px 5px;border-radius:4px;margin-bottom:3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;line-height:1.4;cursor:default}
+.cal-ev-hw {background:#FFE0D4;color:#CC3300}
+.cal-ev-cp {background:#DDD8FF;color:#3A28CC}
+.cal-ev-gtm{background:#D0D8FF;color:var(--blue)}
+.cal-ev:hover{opacity:.8}
+
+/* Footer */
+.footer{border-top:1px solid var(--lgray);padding-top:24px;font-size:12px;color:var(--mgray);font-style:italic;line-height:1.7;margin-top:32px}
+
+/* Print */
+@media print{
+  .controls{display:none}
+  #cal-view{display:none!important}
+  #list-view{display:block!important}
+  .page{padding:20px;max-width:100%}
+}
+@media(max-width:768px){
+  .page{padding:24px 16px 60px}
+  .cal-cell{min-height:72px}
+  .cal-ev{font-size:9px}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<header class="header">
+  <span class="eyebrow">Video Content Calendar</span>
+  <h1 class="title"><span>Chili Piper</span> — Video Content Calendar</h1>
+  <p class="subtitle">June – October 2026 &nbsp;·&nbsp; 22 weeks &nbsp;·&nbsp; LinkedIn · YouTube · Instagram</p>
+  <div class="legend">
+    <span class="chip chip-hw"><span class="dot"></span>Hot Wins</span>
+    <span class="chip chip-cp"><span class="dot"></span>ChiliPalooza</span>
+    <span class="chip chip-gtm"><span class="dot"></span>GTM Clawllective</span>
+    <span class="chip chip-long"><span class="dot"></span>Long = LinkedIn + YouTube</span>
+    <span class="chip chip-short"><span class="dot"></span>Short = LinkedIn + Instagram</span>
+  </div>
+</header>
+
+<div class="info-grid">
+  <div class="info-card">
+    <span class="card-label">Publishing Rhythm</span>
+    <ul>
+      <li>3 posts per week — Monday · Wednesday · Friday</li>
+      <li>1 <strong>Hot Wins</strong> post per week (full interview odd weeks, extract even weeks)</li>
+      <li>1 <strong>ChiliPalooza</strong> post per week — weeks 1 to 14</li>
+      <li>1 <strong>GTM Clawllective</strong> post per week (demo hack alternates with Nicolas interview)</li>
+      <li>From week 15: 2 posts per week — Hot Wins + GTM Clawllective only</li>
+    </ul>
+  </div>
+  <div class="info-card">
+    <span class="card-label">Content Inventory</span>
+    <ul>
+      <li><strong>11 Hot Wins interviews</strong> → 11 full + 11 extracts = 22 posts (22 weeks)</li>
+      <li><strong>7 ChiliPalooza interviews</strong> → 7 full + 7 This or That = 14 posts (14 weeks)</li>
+      <li><strong>GTM Clawllective (weekly)</strong> → alternating demo hack + Nicolas interview</li>
+      <li>Total: <strong>~58 posts</strong> over 22 weeks</li>
+    </ul>
+  </div>
+</div>
+
+<div class="controls">
+  <div class="view-toggle">
+    <button class="view-btn active" id="btn-list" onclick="switchView('list')">☰  List</button>
+    <button class="view-btn" id="btn-cal" onclick="switchView('cal')">⊞  Calendar</button>
+  </div>
+  <nav class="month-nav" id="month-nav">
+    <a href="#june"      class="month-btn active">June</a>
+    <a href="#july"      class="month-btn">July</a>
+    <a href="#august"    class="month-btn">August</a>
+    <a href="#september" class="month-btn">September</a>
+    <a href="#october"   class="month-btn">October</a>
+  </nav>
+</div>
+
+<div id="list-view"></div>
+<div id="cal-view" style="display:none"></div>
+
+<footer class="footer">
+  This calendar is a working draft and may be adjusted based on editing capacity and content availability.
+  Interview numbers (#1–#11 for Hot Wins, #1–#7 for ChiliPalooza) are placeholders — replace with actual
+  titles once the release order is confirmed.
+</footer>
+
+</div>
+<script>
+// ─── CONFIG ──────────────────────────────────────────────────────────────────
+// Paste your Google Sheets CSV URL here after publishing the sheet
+// (File → Share → Publish to web → select the sheet → CSV → Publish)
+// Leave empty to use the hardcoded data below as fallback
+const SHEET_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTHjlGGri3Gnbo2lzo1g1Y4qCFggIbI4yKNSQg0_TowGBzn_A--9BE8oG6VR7hiR24qOR3QR_0K-k80/pub?output=csv';
+
+// Series label → internal code mapping (used when reading from the Sheet)
+const SERIES_MAP = { 'Hot Wins':'hw', 'ChiliPalooza':'cp', 'GTM Clawllective':'gtm' };
+
+// ─── CSV LOADER ───────────────────────────────────────────────────────────────
+function parseCSV(text) {
+  const lines = text.trim().split('\n');
+  const headers = lines[0].split(',').map(h => h.trim().replace(/^"|"$/g,''));
+  return lines.slice(1).map(line => {
+    const vals = []; let cur = '', inQ = false;
+    for (const ch of line) {
+      if (ch==='"') inQ=!inQ;
+      else if (ch===',' && !inQ) { vals.push(cur.trim()); cur=''; }
+      else cur += ch;
+    }
+    vals.push(cur.trim());
+    const obj = {};
+    headers.forEach((h,i) => obj[h] = (vals[i]||'').replace(/^"|"$/g,''));
+    return obj;
+  }).filter(r => r.date && r.week);
+}
+
+async function fetchSheet() {
+  // file:// protocol blocks all external fetches — needs a local server
+  if (location.protocol === 'file:') {
+    showBanner(
+      '⚠️ Le fichier est ouvert en local (<code>file://</code>), le navigateur bloque le chargement du Sheet.' +
+      '<br>Lance ce terminal dans le dossier Marketing :<br>' +
+      '<code style="display:inline-block;margin-top:6px;padding:4px 10px;background:#0d0f1a;border-radius:6px;font-size:12px">' +
+      'python3 -m http.server 8080</code>' +
+      '<br>Puis ouvre : <strong>http://localhost:8080/video-calendar-2026.html</strong>'
+    );
+    return null;
+  }
+  try {
+    const res = await fetch(SHEET_CSV_URL);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const rows = parseCSV(await res.text());
+    const data = rows.map(r => ({
+      w: parseInt(r.week),
+      d: r.date.trim(),
+      s: SERIES_MAP[r.series.trim()] || r.series.trim(),
+      t: r.title.trim(),
+      f: r.format.trim().toLowerCase(),
+      p: r.platforms.trim(),
+    }));
+    showBanner('✓ Données chargées depuis Google Sheets.', 'success');
+    return data;
+  } catch(e) {
+    showBanner(`⚠️ Impossible de charger le Sheet (${e.message}). Données de secours utilisées.`, 'warn');
+    return null;
+  }
+}
+
+function showBanner(html, type='info') {
+  let b = document.getElementById('sheet-banner');
+  if (!b) {
+    b = document.createElement('div');
+    b.id = 'sheet-banner';
+    b.style.cssText = 'position:fixed;bottom:20px;left:50%;transform:translateX(-50%);max-width:600px;width:90%;padding:14px 20px;border-radius:12px;font-size:13px;font-family:Inter,sans-serif;line-height:1.6;z-index:9999;box-shadow:0 4px 24px rgba(0,0,0,.15);text-align:center';
+    document.body.appendChild(b);
+  }
+  const styles = {
+    info:    'background:#131624;color:#DFE2EB',
+    success: 'background:#EEFFF8;color:#008563;border:1px solid #9FE2CA',
+    warn:    'background:#FFF0EB;color:#CC3300;border:1px solid #FFD0BE',
+  };
+  b.style.cssText += ';' + styles[type];
+  b.innerHTML = html + (type === 'success'
+    ? ' <span onclick="this.parentElement.remove()" style="cursor:pointer;margin-left:12px;opacity:.5">✕</span>'
+    : '');
+  if (type === 'success') setTimeout(() => b && b.remove(), 4000);
+}
+
+// ─── DATA ────────────────────────────────────────────────────────────────────
+const SM = {
+  hw:  { label:'Hot Wins',         tint:'#FFF0EB', badge:'#FFE0D4', color:'#CC3300', serColor:'#FF5721' },
+  cp:  { label:'ChiliPalooza',     tint:'#EDEAFF', badge:'#DDD8FF', color:'#3A28CC', serColor:'#543DFF' },
+  gtm: { label:'GTM Clawllective', tint:'#E8EEFF', badge:'#D0D8FF', color:'#3529BF', serColor:'#3529BF' },
+};
+
+const WM = {
+  1:'Jun 2 – 6',      2:'Jun 9 – 13',     3:'Jun 16 – 20',    4:'Jun 23 – 27',
+  5:'Jun 30 – Jul 4', 6:'Jul 7 – 11',     7:'Jul 14 – 18',    8:'Jul 21 – 25',
+  9:'Jul 28 – Aug 1',10:'Aug 4 – 8',     11:'Aug 11 – 15',   12:'Aug 18 – 22',
+ 13:'Aug 25 – 29',  14:'Sep 1 – 5',      15:'Sep 8 – 12',    16:'Sep 15 – 19',
+ 17:'Sep 22 – 26',  18:'Sep 29 – Oct 3', 19:'Oct 6 – 10',    20:'Oct 13 – 17',
+ 21:'Oct 20 – 24',  22:'Oct 27 – 31',
+};
+
+let EV = [
+  {w:1, d:'2026-06-02',s:'hw', t:'Hot Wins #1 — Full Interview',            f:'long', p:'LinkedIn · YouTube'},
+  {w:1, d:'2026-06-04',s:'cp', t:'ChiliPalooza #1 — Full Interview',        f:'long', p:'LinkedIn · YouTube'},
+  {w:1, d:'2026-06-06',s:'gtm',t:'GTM Clawllective — Demo Hack #1',         f:'short',p:'LinkedIn'},
+  {w:2, d:'2026-06-09',s:'hw', t:'Hot Wins #1 — Best Moment (Extract)',     f:'short',p:'LinkedIn · Instagram'},
+  {w:2, d:'2026-06-11',s:'cp', t:'ChiliPalooza #1 — This or That',          f:'short',p:'LinkedIn · Instagram'},
+  {w:2, d:'2026-06-13',s:'gtm',t:'GTM Clawllective — Nicolas Interview #1', f:'short',p:'LinkedIn · Instagram'},
+  {w:3, d:'2026-06-16',s:'hw', t:'Hot Wins #2 — Full Interview',            f:'long', p:'LinkedIn · YouTube'},
+  {w:3, d:'2026-06-18',s:'cp', t:'ChiliPalooza #2 — Full Interview',        f:'long', p:'LinkedIn · YouTube'},
+  {w:3, d:'2026-06-20',s:'gtm',t:'GTM Clawllective — Demo Hack #2',         f:'short',p:'LinkedIn'},
+  {w:4, d:'2026-06-23',s:'hw', t:'Hot Wins #2 — Best Moment (Extract)',     f:'short',p:'LinkedIn · Instagram'},
+  {w:4, d:'2026-06-25',s:'cp', t:'ChiliPalooza #2 — This or That',          f:'short',p:'LinkedIn · Instagram'},
+  {w:4, d:'2026-06-27',s:'gtm',t:'GTM Clawllective — Nicolas Interview #2', f:'short',p:'LinkedIn · Instagram'},
+  {w:5, d:'2026-06-30',s:'hw', t:'Hot Wins #3 — Full Interview',            f:'long', p:'LinkedIn · YouTube'},
+  {w:5, d:'2026-07-02',s:'cp', t:'ChiliPalooza #3 — Full Interview',        f:'long', p:'LinkedIn · YouTube'},
+  {w:5, d:'2026-07-04',s:'gtm',t:'GTM Clawllective — Demo Hack #3',         f:'short',p:'LinkedIn'},
+  {w:6, d:'2026-07-07',s:'hw', t:'Hot Wins #3 — Best Moment (Extract)',     f:'short',p:'LinkedIn · Instagram'},
+  {w:6, d:'2026-07-09',s:'cp', t:'ChiliPalooza #3 — This or That',          f:'short',p:'LinkedIn · Instagram'},
+  {w:6, d:'2026-07-11',s:'gtm',t:'GTM Clawllective — Nicolas Interview #3', f:'short',p:'LinkedIn · Instagram'},
+  {w:7, d:'2026-07-14',s:'hw', t:'Hot Wins #4 — Full Interview',            f:'long', p:'LinkedIn · YouTube'},
+  {w:7, d:'2026-07-16',s:'cp', t:'ChiliPalooza #4 — Full Interview',        f:'long', p:'LinkedIn · YouTube'},
+  {w:7, d:'2026-07-18',s:'gtm',t:'GTM Clawllective — Demo Hack #4',         f:'short',p:'LinkedIn'},
+  {w:8, d:'2026-07-21',s:'hw', t:'Hot Wins #4 — Best Moment (Extract)',     f:'short',p:'LinkedIn · Instagram'},
+  {w:8, d:'2026-07-23',s:'cp', t:'ChiliPalooza #4 — This or That',          f:'short',p:'LinkedIn · Instagram'},
+  {w:8, d:'2026-07-25',s:'gtm',t:'GTM Clawllective — Nicolas Interview #4', f:'short',p:'LinkedIn · Instagram'},
+  {w:9, d:'2026-07-28',s:'hw', t:'Hot Wins #5 — Full Interview',            f:'long', p:'LinkedIn · YouTube'},
+  {w:9, d:'2026-07-30',s:'cp', t:'ChiliPalooza #5 — Full Interview',        f:'long', p:'LinkedIn · YouTube'},
+  {w:9, d:'2026-08-01',s:'gtm',t:'GTM Clawllective — Demo Hack #5',         f:'short',p:'LinkedIn'},
+  {w:10,d:'2026-08-04',s:'hw', t:'Hot Wins #5 — Best Moment (Extract)',     f:'short',p:'LinkedIn · Instagram'},
+  {w:10,d:'2026-08-06',s:'cp', t:'ChiliPalooza #5 — This or That',          f:'short',p:'LinkedIn · Instagram'},
+  {w:10,d:'2026-08-08',s:'gtm',t:'GTM Clawllective — Nicolas Interview #5', f:'short',p:'LinkedIn · Instagram'},
+  {w:11,d:'2026-08-11',s:'hw', t:'Hot Wins #6 — Full Interview',            f:'long', p:'LinkedIn · YouTube'},
+  {w:11,d:'2026-08-13',s:'cp', t:'ChiliPalooza #6 — Full Interview',        f:'long', p:'LinkedIn · YouTube'},
+  {w:11,d:'2026-08-15',s:'gtm',t:'GTM Clawllective — Demo Hack #6',         f:'short',p:'LinkedIn'},
+  {w:12,d:'2026-08-18',s:'hw', t:'Hot Wins #6 — Best Moment (Extract)',     f:'short',p:'LinkedIn · Instagram'},
+  {w:12,d:'2026-08-20',s:'cp', t:'ChiliPalooza #6 — This or That',          f:'short',p:'LinkedIn · Instagram'},
+  {w:12,d:'2026-08-22',s:'gtm',t:'GTM Clawllective — Nicolas Interview #6', f:'short',p:'LinkedIn · Instagram'},
+  {w:13,d:'2026-08-25',s:'hw', t:'Hot Wins #7 — Full Interview',            f:'long', p:'LinkedIn · YouTube'},
+  {w:13,d:'2026-08-27',s:'cp', t:'ChiliPalooza #7 — Full Interview',        f:'long', p:'LinkedIn · YouTube'},
+  {w:13,d:'2026-08-29',s:'gtm',t:'GTM Clawllective — Demo Hack #7',         f:'short',p:'LinkedIn'},
+  {w:14,d:'2026-09-01',s:'hw', t:'Hot Wins #7 — Best Moment (Extract)',     f:'short',p:'LinkedIn · Instagram'},
+  {w:14,d:'2026-09-03',s:'cp', t:'ChiliPalooza #7 — This or That',          f:'short',p:'LinkedIn · Instagram'},
+  {w:14,d:'2026-09-05',s:'gtm',t:'GTM Clawllective — Nicolas Interview #7', f:'short',p:'LinkedIn · Instagram'},
+  {w:15,d:'2026-09-08',s:'hw', t:'Hot Wins #8 — Full Interview',            f:'long', p:'LinkedIn · YouTube'},
+  {w:15,d:'2026-09-12',s:'gtm',t:'GTM Clawllective — Demo Hack #8',         f:'short',p:'LinkedIn'},
+  {w:16,d:'2026-09-15',s:'hw', t:'Hot Wins #8 — Best Moment (Extract)',     f:'short',p:'LinkedIn · Instagram'},
+  {w:16,d:'2026-09-19',s:'gtm',t:'GTM Clawllective — Nicolas Interview #8', f:'short',p:'LinkedIn · Instagram'},
+  {w:17,d:'2026-09-22',s:'hw', t:'Hot Wins #9 — Full Interview',            f:'long', p:'LinkedIn · YouTube'},
+  {w:17,d:'2026-09-26',s:'gtm',t:'GTM Clawllective — Demo Hack #9',         f:'short',p:'LinkedIn'},
+  {w:18,d:'2026-09-29',s:'hw', t:'Hot Wins #9 — Best Moment (Extract)',     f:'short',p:'LinkedIn · Instagram'},
+  {w:18,d:'2026-10-03',s:'gtm',t:'GTM Clawllective — Nicolas Interview #9', f:'short',p:'LinkedIn · Instagram'},
+  {w:19,d:'2026-10-06',s:'hw', t:'Hot Wins #10 — Full Interview',           f:'long', p:'LinkedIn · YouTube'},
+  {w:19,d:'2026-10-10',s:'gtm',t:'GTM Clawllective — Demo Hack #10',        f:'short',p:'LinkedIn'},
+  {w:20,d:'2026-10-13',s:'hw', t:'Hot Wins #10 — Best Moment (Extract)',    f:'short',p:'LinkedIn · Instagram'},
+  {w:20,d:'2026-10-17',s:'gtm',t:'GTM Clawllective — Nicolas Interview #10',f:'short',p:'LinkedIn · Instagram'},
+  {w:21,d:'2026-10-20',s:'hw', t:'Hot Wins #11 — Full Interview',           f:'long', p:'LinkedIn · YouTube'},
+  {w:21,d:'2026-10-24',s:'gtm',t:'GTM Clawllective — Demo Hack #11',        f:'short',p:'LinkedIn'},
+  {w:22,d:'2026-10-27',s:'hw', t:'Hot Wins #11 — Best Moment (Extract)',    f:'short',p:'LinkedIn · Instagram'},
+  {w:22,d:'2026-10-31',s:'gtm',t:'GTM Clawllective — Nicolas Interview #11',f:'short',p:'LinkedIn · Instagram'},
+];
+
+const MONTHS = [
+  {id:'june',      name:'June',      year:2026, m:5},
+  {id:'july',      name:'July',      year:2026, m:6},
+  {id:'august',    name:'August',    year:2026, m:7},
+  {id:'september', name:'September', year:2026, m:8},
+  {id:'october',   name:'October',   year:2026, m:9},
+];
+
+// Index events by date (rebuilt after each data load)
+let byDate = {};
+function buildIndex() { byDate = {}; EV.forEach(e => { (byDate[e.d]=byDate[e.d]||[]).push(e); }); }
+buildIndex();
+
+// ─── LIST VIEW ───────────────────────────────────────────────────────────────
+function renderList() {
+  // Group by month → week
+  const mData = {};
+  MONTHS.forEach(mo => { mData[mo.id] = {mo, weeks:{}}; });
+  EV.forEach(e => {
+    const mo = MONTHS.find(m => m.m === new Date(e.d+'T12:00:00').getMonth());
+    if (!mo) return;
+    (mData[mo.id].weeks[e.w] = mData[mo.id].weeks[e.w]||[]).push(e);
+  });
+
+  const DAY_FR = {0:'Sun',1:'Mon',2:'Tue',3:'Wed',4:'Thu',5:'Fri',6:'Sat'};
+  const MON_SHORT = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+  function dayLabel(d) {
+    const dt = new Date(d+'T12:00:00');
+    return `${DAY_FR[dt.getDay()]} ${MON_SHORT[dt.getMonth()]} ${dt.getDate()}`;
+  }
+
+  let h = '';
+  MONTHS.forEach(mo => {
+    const {weeks} = mData[mo.id];
+    const wNums = Object.keys(weeks).map(Number).sort((a,b)=>a-b);
+    if (!wNums.length) return;
+    h += `<section class="month-section" id="${mo.id}">`;
+    h += `<h2 class="month-heading">${mo.name} 2026</h2>`;
+    wNums.forEach(wn => {
+      const rows = weeks[wn];
+      if (wn === 15) h += `<div class="transition-note"><strong>ChiliPalooza content exhausted — from week 15:</strong> Hot Wins + GTM Clawllective only, 2 posts per week.</div>`;
+      h += `<div class="week-block">`;
+      h += `<div class="week-header"><span class="week-label">Week ${wn}</span><span class="week-dates">${WM[wn]}</span><span class="week-count">${rows.length} post${rows.length>1?'s':''}</span></div>`;
+      h += `<table class="list-table"><thead><tr><th style="width:120px">Day</th><th style="width:140px">Series</th><th>Content</th><th class="c" style="width:80px">Format</th><th style="width:200px">Platforms</th></tr></thead><tbody>`;
+      rows.forEach(e => {
+        h += `<tr class="${e.s}"><td class="td-day">${dayLabel(e.d)}</td><td><span class="sbadge">${SM[e.s].label}</span></td><td class="td-content">${e.t}</td><td class="c"><span class="fmt fmt-${e.f}">${e.f==='long'?'Long':'Short'}</span></td><td class="td-plat">${e.p}</td></tr>`;
+      });
+      h += `</tbody></table></div>`;
+    });
+    h += `</section>`;
+  });
+  document.getElementById('list-view').innerHTML = h;
+}
+
+// ─── CALENDAR VIEW ───────────────────────────────────────────────────────────
+function renderCal() {
+  const DOW = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+  let h = '';
+  MONTHS.forEach(mo => {
+    const firstDow = (new Date(mo.year, mo.m, 1).getDay() + 6) % 7; // Mon=0
+    const daysInMo = new Date(mo.year, mo.m + 1, 0).getDate();
+
+    h += `<section class="cal-month" id="${mo.id}-cal">`;
+    h += `<h2 class="cal-month-title">${mo.name} 2026</h2>`;
+    h += `<div class="cal-grid">`;
+    DOW.forEach(d => { h += `<div class="cal-dow">${d}</div>`; });
+
+    for (let i = 0; i < firstDow; i++) h += `<div class="cal-cell empty wknd"></div>`;
+
+    for (let day = 1; day <= daysInMo; day++) {
+      const ds = `${mo.year}-${String(mo.m+1).padStart(2,'0')}-${String(day).padStart(2,'0')}`;
+      const dow = (new Date(mo.year, mo.m, day).getDay() + 6) % 7;
+      const isWknd = dow >= 5;
+      const evs = byDate[ds] || [];
+      h += `<div class="cal-cell${isWknd?' wknd':''}">`;
+      h += `<div class="cal-num">${day}</div>`;
+      evs.forEach(e => {
+        // Short label for the cell
+        const short = e.t
+          .replace('Hot Wins','HW')
+          .replace('ChiliPalooza','CP')
+          .replace('GTM Clawllective','GTM');
+        const fmtLabel = e.f === 'long' ? ' · Long' : ' · Short';
+        h += `<span class="cal-ev cal-ev-${e.s}" title="${e.t}${fmtLabel} · ${e.p}">${short}</span>`;
+      });
+      h += `</div>`;
+    }
+
+    const total = firstDow + daysInMo;
+    const rem = total % 7;
+    if (rem) for (let i = 0; i < 7-rem; i++) h += `<div class="cal-cell empty wknd"></div>`;
+
+    h += `</div></section>`;
+  });
+  document.getElementById('cal-view').innerHTML = h;
+}
+
+// ─── SWITCHING ───────────────────────────────────────────────────────────────
+let currentView = 'list';
+
+function switchView(v) {
+  currentView = v;
+  document.getElementById('list-view').style.display = v==='list' ? 'block' : 'none';
+  document.getElementById('cal-view').style.display  = v==='cal'  ? 'block' : 'none';
+  document.getElementById('btn-list').classList.toggle('active', v==='list');
+  document.getElementById('btn-cal').classList.toggle('active',  v==='cal');
+  // Sync nav hrefs
+  document.querySelectorAll('.month-nav .month-btn').forEach(btn => {
+    const base = btn.getAttribute('href').replace('#','').replace('-cal','');
+    btn.setAttribute('href', v==='cal' ? `#${base}-cal` : `#${base}`);
+  });
+}
+
+// Scroll spy — works for both views
+function setupSpy() {
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      const base = e.target.id.replace('-cal','');
+      document.querySelectorAll('.month-btn').forEach(b => b.classList.remove('active'));
+      const a = document.querySelector(`.month-btn[href="#${base}"], .month-btn[href="#${base}-cal"]`);
+      if (a) a.classList.add('active');
+    });
+  }, {threshold: 0.15});
+  document.querySelectorAll('.month-section, .cal-month').forEach(s => io.observe(s));
+}
+
+// Month nav click
+document.querySelectorAll('.month-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.month-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  });
+});
+
+async function init() {
+  if (SHEET_CSV_URL) {
+    document.getElementById('list-view').innerHTML =
+      '<p style="text-align:center;padding:48px;color:var(--mgray);font-style:italic">Loading data from Google Sheets...</p>';
+    const live = await fetchSheet();
+    if (live) { EV = live; buildIndex(); }
+  }
+  renderList();
+  renderCal();
+  setupSpy();
+}
+init();
+</script>
+</body>
+</html>
